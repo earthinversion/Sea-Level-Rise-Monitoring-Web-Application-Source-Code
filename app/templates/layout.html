@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
+
+
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+      <!-- <script src="{{url_for('static', filename='myscripts.js')}}"></script> -->
+      <script type = "text/javascript" src = "{{ url_for('static', filename = 'myscripts.js') }}" ></script>
+
+      {% if title %}
+          <title>SLRM : {{ title }}</title>
+      {% else %}
+          <title>SLRM</title>
+      {% endif %}
+  </head>
+  <body>
+      <header class="site-header">
+          <div class="sidebar-toggle">
+              <div id="mySidebar" class="sidebar">
+                  <button class="closebtn" onclick="closeNav()"><i class="fas fa-times-circle"></i></button>
+                  <!-- <button class="closebtn""><i class="fa fa-window-close"></i></button> -->
+                  <a href="#">Observation</a>
+                  <a href="#">Effects</a>
+                  <a href="#">Image Analysis</a>
+                  <a href="#">Current Research</a>
+                  <a href="#">Contact Us</a>
+                </div>
+              </div>
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top scrolling-navbar">
+            <div id="main">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+                <!-- <button class="openbtn">&#9776;</button> -->
+              </div>
+            <div class="container">
+              <a class="navbar-brand" href="#">Sea Level Rise Monitoring</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+                <ul class="navbar-nav ml-auto nav-flex-icons">
+                  <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                      <i class="fab fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link waves-effect waves-light">
+                      <i class="fab fa-google-plus-g"></i>
+                    </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-user"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                      aria-labelledby="navbarDropdownMenuLink-333">
+                      <a class="dropdown-item" href="#">Login</a>
+                      <a class="dropdown-item" href="#">Register</a>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </header>
+
+        <main id="main" class="container-fluid">
+            <div class="row">
+              <div class="col-md-2">
+              </div>
+              <div class="col-md-10">
+                <div class="content-section">
+                  {% block content %}{% endblock %}
+                </div>
+                </div>
+            </div>
+          </main>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

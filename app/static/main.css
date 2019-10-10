@@ -1,0 +1,128 @@
+body {
+  background: url(http://subtlepatterns.com/patterns/lightpaperfibers.png) repeat 0 0;
+}
+  h1, h2, h3, h4, h5, h6 {
+    color: #444444;
+  }
+  
+  .bg-steel {
+    background-color: #282935;
+  }
+
+  .navbar-nav .nav-item .nav-link .fa-facebook {
+    color:#3b5998;
+  }
+  .navbar-nav .nav-item .nav-link .fa-facebook:hover {
+    color:#325bb4;
+  }
+  .navbar-nav .nav-item .nav-link .fa-instagram {
+    color:#833AB4;
+  }
+  .navbar-nav .nav-item .nav-link .fa-instagram:hover {
+    color:rgb(146, 36, 219);
+  }
+  .navbar-nav .nav-item .nav-link .fa-twitter {
+    color:#55acee;
+  }
+  .navbar-nav .nav-item .nav-link .fa-twitter:hover {
+    color:#1893f1;
+  }
+  .navbar-nav .nav-item .nav-link .fa-google-plus-g {
+    color:#dc4e41;
+  }
+  .navbar-nav .nav-item .nav-link .fa-google-plus-g:hover {
+    color:#ee220f;
+  }
+  .navbar-nav .nav-item .nav-link .fa-user {
+    color:#eb1487;
+  }
+  .navbar-nav .nav-item .nav-link .fa-user:hover {
+    color:#f30ad4;
+  }
+
+  .navbar-brand {
+    font-family: 'Finger Paint', cursive;
+  }
+
+  .content-section {
+    margin-top: 5rem;
+  }
+  
+  .double-nav .breadcrumb-dn {
+    color: #fff;
+  }
+
+
+
+
+
+
+/* The sidebar menu */
+/* .sidebar-toggle {
+  margin-top: 4rem;
+} */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 30;
+    left: 0;
+    background-color: #282935; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 40px; /* Place content 300px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    margin-top: 70px;
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #818181;
+  }
+  
+
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    margin-right: 10px;
+  }
+  .closebtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 0px 0px;
+    border: none;
+    margin-left: 200px;
+  }
+  
+  .openbtn:hover {
+    background-color: #32354e;
+  }
+  
+  .sidebar-toggle {
+    transition: margin-left .2s; /* If you want a transition effect */
+    padding: 0;
+  }
+
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
