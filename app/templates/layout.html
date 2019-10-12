@@ -24,11 +24,32 @@
   <body>
       <header class="site-header">
               <div id="mySidebar" class="sidebar">
-                  <a href="#"><i class="fa fa-user-md fa-lg"></i> Observations</a>
-                  <a href="#"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
-                  <a href="#"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
-                  <a href="#"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
-                  <a href="#"><i class="fa fa-info-circle fa-lg"></i> Contact Us</a>
+                  <a href="{{ url_for('home') }}"><i class="fa fa-user-md fa-lg"></i> Observations</a>
+                  <a href="{{ url_for('effects') }}"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
+                  <a href="{{ url_for('image_analysis') }}"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
+                  <a href="{{ url_for('current_research') }}"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
+                  <a href="{{ url_for('get_in_touch') }}"><i class="fa fa-info-circle fa-lg"></i> Get in Touch</a>
+                  <div class="sidebar_social_icons">
+                      <div class="social_icon_text">Share on social media</div>
+                      <div class="row">
+                      <a class="nav-link waves-effect waves-light" href="#">
+                        <i class="fa fa-facebook fa-lg"></i>
+                      </a>
+                  
+                      <a class="nav-link waves-effect waves-light" href="#">
+                        <i class="fa fa-instagram fa-lg"></i>
+                      </a>
+                  
+                      <a class="nav-link waves-effect waves-light" href="#">
+                        <i class="fa fa-twitter fa-lg"></i>
+                      </a>
+                  
+                      <a class="nav-link waves-effect waves-light" href="#">
+                        <i class="fa fa-google-plus fa-lg"></i>
+                      </a>
+                    </div>
+                  
+                  </div>
                 </div>
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top scrolling-navbar">
             <div id="menu-open-close">
@@ -36,45 +57,27 @@
               <button id="closebtn"><i class="fa fa-times-circle"></i></button>
             </div>
             <div class="container">
-              <a class="navbar-brand" href="#"><i class="fa fa-water"></i>Sea Level Rise Monitoring</a>
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#"> <i class="fa fa-angle-double-right fa-lg"></i> Sea Level Rise Monitoring</a>
+              </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
                 <ul class="navbar-nav ml-auto nav-flex-icons">
-                  <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">
-                      <i class="fa fa-facebook fa-lg"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">
-                      <i class="fa fa-instagram fa-lg"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">
-                      <i class="fa fa-twitter fa-lg"></i>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light" href="#">
-                      <i class="fa fa-google-plus fa-lg"></i>
-                    </a>
-                  </li>
-                  <button class="btn-login">
-                  <li class="nav-item dropdown">
-                    <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                      aria-haspopup="true" aria-expanded="false">
-                      <span id="login-text">Login </span>
-                      <i class="fa fa-user fa-lg"></i>
-                  </div>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                      aria-labelledby="navbarDropdownMenuLink-333">
-                      <a class="dropdown-item" href="#">Login</a>
-                      <a class="dropdown-item" href="#">Register</a>
-                      <a class="dropdown-item" href="#">Logout</a>
-                    </div>
-
-                  </li>
-                </button>
+                    <button class="btn-login">
+                        <li class="nav-item dropdown">
+                          <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <a id="login-text">Sign in </a>
+                            <i class="fa fa-sign-in fa-lg"></i>
+                        </div>
+                          <div class="dropdown-menu dropdown-menu-right dropdown-default"
+                            aria-labelledby="navbarDropdownMenuLink-333">
+                            <a class="dropdown-item" href="#"> <i class="fa fa-sign-in fa-lg"></i> Sign in</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-sign-out fa-lg"></i> Sign out</a>
+                            <a class="dropdown-item" href="#"> <i class="fa fa-user-plus fa-lg"></i> Sign up</a>
+                          </div>
+      
+                        </li>
+              
                 </ul>
               </div>
             </div>
@@ -86,6 +89,7 @@
               <div class="col-md-12">
                 <div class="content-section">
                   {% block content %}{% endblock %}
+                  <div id="refresh-btn"><i class="fa fa-refresh fa-spin fa-lg"></i></div>
                 </div>
                 </div>
             </div>

@@ -1,5 +1,10 @@
 body {
   background: url(http://subtlepatterns.com/patterns/lightpaperfibers.png) repeat 0 0;
+  height: 100%;
+  margin: 0;
+}
+.site-header {
+  width: 100%;
 }
   h1, h2, h3, h4, h5, h6 {
     color: #444444;
@@ -9,58 +14,76 @@ body {
   background-color: #282935;
 }
 
-.navbar-nav .nav-item .nav-link .fa-facebook {
+.fa-facebook {
   color:#3b5998;
 }
-.navbar-nav .nav-item .nav-link .fa-facebook:hover {
+.fa-facebook:hover {
   color:#325bb4;
   transform: scale(1.1);
 }
-.navbar-nav .nav-item .nav-link .fa-instagram {
+.fa-instagram {
   color:#833AB4;
 }
-.navbar-nav .nav-item .nav-link .fa-instagram:hover {
+.fa-instagram:hover {
   color:rgb(146, 36, 219);
   transform: scale(1.1);
 }
-.navbar-nav .nav-item .nav-link .fa-twitter {
+.fa-twitter {
   color:#55acee;
 }
-.navbar-nav .nav-item .nav-link .fa-twitter:hover {
+.fa-twitter:hover {
   color:#1893f1;
   transform: scale(1.1);
 }
-.navbar-nav .nav-item .nav-link .fa-google-plus {
+.fa-google-plus {
   color:#dc4e41;
 }
-.navbar-nav .nav-item .nav-link .fa-google-plus:hover {
+.fa-google-plus:hover {
   color:#ee220f;
   transform: scale(1.1);
 }
-.navbar-nav .nav-item .nav-link .fa-user,.navbar-nav .nav-item .nav-link  #login-text {
-  color:#eb1487;
+/* .fa-user-plus {
+  color:#5041dc;
 }
-.navbar-nav .nav-item .nav-link .fa-user:hover, .navbar-nav .nav-item .nav-link #login-text:hover {
-  color:#f30ad4;
+.fa-user-plus:hover {
+  color:#250fee;
+  transform: scale(1.1);
+} */
+.sidebar_social_icons {
+  padding-top: 100%;
 }
-
+/* .social_icon_text {
+  color: white;
+  font-size: 100%;
+  padding: 10%;
+} */
 .navbar-brand {
   font-family: 'Finger Paint', cursive;
 }
-.navbar-brand .fas .fa-water {
-  font-size: 5em;
-}
+
 .btn-login {
   background-color: transparent; /* Green */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  border: none;
 }
 .btn-login:hover {
   transform: scale(1.1);
 } 
-
+.btn-login #login-text {
+  color: white;
+}
+.fa-sign-in {
+  color:white;
+}
+#signup-text {
+  color: white;
+}
+.nav-item a {
+  color: white;
+}
 .content-section {
   position: relative;
   margin-top: 5rem;
@@ -97,7 +120,7 @@ body {
   }
   
   /* The sidebar links */
-  .sidebar a {
+  .sidebar a, .social_icon_text {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 16px;
@@ -152,4 +175,16 @@ body {
   #refresh-btn i {
     padding: 2em;
     font-size: 10em;
+  }
+
+
+  .navbar {
+    position: relative;
+    border-radius: 0px;
+    border: 0px;
+    height: 4.5em;
+    -webkit-transition: height 300ms ease-in-out;
+    -moz-transition: height 300ms ease-in-out;
+    -o-transition: height 300ms ease-in-out;
+    transition: height 300ms ease-in-out;
   }
