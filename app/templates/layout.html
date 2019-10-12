@@ -4,8 +4,8 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
-
+      <!-- <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
@@ -13,8 +13,7 @@
 
 
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
-      <!-- <script src="{{url_for('static', filename='myscripts.js')}}"></script> -->
-      <script type = "text/javascript" src = "{{ url_for('static', filename = 'myscripts.js') }}" ></script>
+      <script src = "{{ url_for('static', filename = 'myscripts.js') }}" ></script>
 
       {% if title %}
           <title>SLRM : {{ title }}</title>
@@ -24,73 +23,67 @@
   </head>
   <body>
       <header class="site-header">
-          <div class="sidebar-toggle">
               <div id="mySidebar" class="sidebar">
-                  <button class="closebtn" onclick="closeNav()"><i class="fas fa-times-circle"></i></button>
-                  <!-- <button class="closebtn""><i class="fa fa-window-close"></i></button> -->
-                  <a href="#">Observation</a>
-                  <a href="#">Effects</a>
-                  <a href="#">Image Analysis</a>
-                  <a href="#">Current Research</a>
-                  <a href="#">Contact Us</a>
+                  <a href="#"><i class="fa fa-user-md fa-lg"></i> Observations</a>
+                  <a href="#"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
+                  <a href="#"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
+                  <a href="#"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
+                  <a href="#"><i class="fa fa-info-circle fa-lg"></i> Contact Us</a>
                 </div>
-              </div>
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top scrolling-navbar">
-            <div id="main">
-                <button class="openbtn" onclick="openNav()">&#9776;</button>
-                <!-- <button class="openbtn">&#9776;</button> -->
-              </div>
+            <div id="menu-open-close">
+              <button id="openbtn">&#9776;</button>
+              <button id="closebtn"><i class="fa fa-times-circle"></i></button>
+            </div>
             <div class="container">
-              <a class="navbar-brand" href="#">Sea Level Rise Monitoring</a>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
-                aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+              <a class="navbar-brand" href="#"><i class="fa fa-water"></i>Sea Level Rise Monitoring</a>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
                 <ul class="navbar-nav ml-auto nav-flex-icons">
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                      <i class="fab fa-facebook"></i>
+                    <a class="nav-link waves-effect waves-light" href="#">
+                      <i class="fa fa-facebook fa-lg"></i>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                      <i class="fab fa-instagram"></i>
+                    <a class="nav-link waves-effect waves-light" href="#">
+                      <i class="fa fa-instagram fa-lg"></i>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                      <i class="fab fa-twitter"></i>
+                    <a class="nav-link waves-effect waves-light" href="#">
+                      <i class="fa fa-twitter fa-lg"></i>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link waves-effect waves-light">
-                      <i class="fab fa-google-plus-g"></i>
+                    <a class="nav-link waves-effect waves-light" href="#">
+                      <i class="fa fa-google-plus fa-lg"></i>
                     </a>
                   </li>
+                  <button class="btn-login">
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
+                    <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-user"></i>
-                    </a>
+                      <span id="login-text">Login </span>
+                      <i class="fa fa-user fa-lg"></i>
+                  </div>
                     <div class="dropdown-menu dropdown-menu-right dropdown-default"
                       aria-labelledby="navbarDropdownMenuLink-333">
                       <a class="dropdown-item" href="#">Login</a>
                       <a class="dropdown-item" href="#">Register</a>
                       <a class="dropdown-item" href="#">Logout</a>
                     </div>
+
                   </li>
+                </button>
                 </ul>
               </div>
             </div>
           </nav>
         </header>
 
-        <main id="main" class="container-fluid">
+        <main id="main" class="container">
             <div class="row">
-              <div class="col-md-2">
-              </div>
-              <div class="col-md-10">
+              <div class="col-md-12">
                 <div class="content-section">
                   {% block content %}{% endblock %}
                 </div>

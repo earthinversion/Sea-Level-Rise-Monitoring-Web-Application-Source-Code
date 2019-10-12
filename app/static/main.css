@@ -3,83 +3,104 @@ body {
 }
   h1, h2, h3, h4, h5, h6 {
     color: #444444;
-  }
-  
-  .bg-steel {
-    background-color: #282935;
-  }
+}
 
-  .navbar-nav .nav-item .nav-link .fa-facebook {
-    color:#3b5998;
-  }
-  .navbar-nav .nav-item .nav-link .fa-facebook:hover {
-    color:#325bb4;
-  }
-  .navbar-nav .nav-item .nav-link .fa-instagram {
-    color:#833AB4;
-  }
-  .navbar-nav .nav-item .nav-link .fa-instagram:hover {
-    color:rgb(146, 36, 219);
-  }
-  .navbar-nav .nav-item .nav-link .fa-twitter {
-    color:#55acee;
-  }
-  .navbar-nav .nav-item .nav-link .fa-twitter:hover {
-    color:#1893f1;
-  }
-  .navbar-nav .nav-item .nav-link .fa-google-plus-g {
-    color:#dc4e41;
-  }
-  .navbar-nav .nav-item .nav-link .fa-google-plus-g:hover {
-    color:#ee220f;
-  }
-  .navbar-nav .nav-item .nav-link .fa-user {
-    color:#eb1487;
-  }
-  .navbar-nav .nav-item .nav-link .fa-user:hover {
-    color:#f30ad4;
-  }
+.bg-steel {
+  background-color: #282935;
+}
 
-  .navbar-brand {
-    font-family: 'Finger Paint', cursive;
-  }
+.navbar-nav .nav-item .nav-link .fa-facebook {
+  color:#3b5998;
+}
+.navbar-nav .nav-item .nav-link .fa-facebook:hover {
+  color:#325bb4;
+  transform: scale(1.1);
+}
+.navbar-nav .nav-item .nav-link .fa-instagram {
+  color:#833AB4;
+}
+.navbar-nav .nav-item .nav-link .fa-instagram:hover {
+  color:rgb(146, 36, 219);
+  transform: scale(1.1);
+}
+.navbar-nav .nav-item .nav-link .fa-twitter {
+  color:#55acee;
+}
+.navbar-nav .nav-item .nav-link .fa-twitter:hover {
+  color:#1893f1;
+  transform: scale(1.1);
+}
+.navbar-nav .nav-item .nav-link .fa-google-plus {
+  color:#dc4e41;
+}
+.navbar-nav .nav-item .nav-link .fa-google-plus:hover {
+  color:#ee220f;
+  transform: scale(1.1);
+}
+.navbar-nav .nav-item .nav-link .fa-user,.navbar-nav .nav-item .nav-link  #login-text {
+  color:#eb1487;
+}
+.navbar-nav .nav-item .nav-link .fa-user:hover, .navbar-nav .nav-item .nav-link #login-text:hover {
+  color:#f30ad4;
+}
 
-  .content-section {
-    margin-top: 5rem;
-  }
-  
-  .double-nav .breadcrumb-dn {
-    color: #fff;
-  }
+.navbar-brand {
+  font-family: 'Finger Paint', cursive;
+}
+.navbar-brand .fas .fa-water {
+  font-size: 5em;
+}
+.btn-login {
+  background-color: transparent; /* Green */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn-login:hover {
+  transform: scale(1.1);
+} 
+
+.content-section {
+  position: relative;
+  margin-top: 5rem;
+}
+
+.double-nav .breadcrumb-dn {
+  color: #fff;
+}
+
+/* Dropdown Button */
+.dropdown-menu {
+  background-color: #282935;
+}
+.dropdown-menu a{
+  color: white;
+}
 
 
-
-
-
-
-/* The sidebar menu */
-/* .sidebar-toggle {
-  margin-top: 4rem;
-} */
+#menu-open-close #openbtn:hover, #menu-open-close #closebtn:hover {
+  transform: scale(1.3);
+}
 .sidebar {
     height: 100%; /* 100% Full-height */
     width: 0; /* 0 width - change this with JavaScript */
     position: fixed; /* Stay in place */
     z-index: 1; /* Stay on top */
-    top: 30;
+    top: 0;
     left: 0;
     background-color: #282935; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 40px; /* Place content 300px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    margin-top: 70px;
+    margin-top: 60px;
   }
   
   /* The sidebar links */
   .sidebar a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 16px;
     color: #f1f1f1;
     display: block;
     transition: 0.3s;
@@ -93,36 +114,42 @@ body {
 
   
   /* The button used to open the sidebar */
-  .openbtn {
-    font-size: 20px;
-    cursor: pointer;
-    background-color: black;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    margin-right: 10px;
-  }
-  .closebtn {
-    font-size: 20px;
+  #openbtn {
+    font-size: 30px;
     cursor: pointer;
     background-color: transparent;
     color: white;
-    padding: 0px 0px;
+    padding: 0;
     border: none;
-    margin-left: 200px;
+    margin-left: 80px;
+    display: block;
   }
   
-  .openbtn:hover {
+  #closebtn {
+    font-size: 30px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    border: none;
+    margin-left: 80px;
+    display: none;
+  }
+
+  #openbtn:hover {
     background-color: #32354e;
   }
-  
-  .sidebar-toggle {
-    transition: margin-left .2s; /* If you want a transition effect */
-    padding: 0;
-  }
+
+
 
   /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
   @media screen and (max-height: 450px) {
     .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 18px;}
+  }
+
+  /* Home page*/
+  #refresh-btn i {
+    padding: 2em;
+    font-size: 10em;
   }
