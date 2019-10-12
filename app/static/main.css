@@ -13,7 +13,9 @@ body {
 .bg-steel {
   background-color: #282935;
 }
-
+/* .fa .fa-sign-in:hover {
+  color: #282935;
+} */
 .fa-facebook {
   color:#3b5998;
 }
@@ -42,23 +44,22 @@ body {
   color:#ee220f;
   transform: scale(1.1);
 }
-/* .fa-user-plus {
-  color:#5041dc;
-}
-.fa-user-plus:hover {
-  color:#250fee;
-  transform: scale(1.1);
+/* .fa-angle-double-right {
+  font-size: 200%;
 } */
+.fa-tint {
+  font-size: 150%;
+  padding-right: 5%;
+}
+
 .sidebar_social_icons {
-  padding-top: 100%;
+  padding-top: 200%;
 }
-/* .social_icon_text {
-  color: white;
-  font-size: 100%;
-  padding: 10%;
-} */
+
 .navbar-brand {
-  font-family: 'Finger Paint', cursive;
+  font-family: 'Changa', sans-serif;
+  font-size: 200%;
+  margin: 60%; 
 }
 
 .btn-login {
@@ -75,9 +76,9 @@ body {
 .btn-login #login-text {
   color: white;
 }
-.fa-sign-in {
+/* .fa-sign-in {
   color:white;
-}
+} */
 #signup-text {
   color: white;
 }
@@ -106,17 +107,17 @@ body {
   transform: scale(1.3);
 }
 .sidebar {
-    height: 100%; /* 100% Full-height */
-    width: 0; /* 0 width - change this with JavaScript */
+    width: 250px; /* 0 Full-width*/
+    height: 0; /* height - change this with JavaScript */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Stay on top */
+    z-index: 0; /* Stay on top */
     top: 0;
     left: 0;
     background-color: #282935; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 40px; /* Place content 300px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    margin-top: 60px;
+    margin-top: 0px;
   }
   
   /* The sidebar links */
