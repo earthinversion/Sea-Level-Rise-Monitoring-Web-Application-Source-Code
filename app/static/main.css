@@ -115,9 +115,9 @@ body {
     left: 0;
     background-color: #282935; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 40px; /* Place content 300px from the top */
+    padding-top: 70px; /* Place content 300px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-    margin-top: 0px;
+    margin-top: 0;
   }
   
   /* The sidebar links */
