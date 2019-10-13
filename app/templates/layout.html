@@ -4,17 +4,21 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script> -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Mansalva&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Changa&display=swap" rel="stylesheet">
+      
 
 
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
       <script src = "{{ url_for('static', filename = 'myscripts.js') }}" ></script>
+      {% block scripts %}{% endblock scripts%}
 
       {% if title %}
           <title>SLRM : {{ title }}</title>
@@ -55,7 +59,7 @@
             <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top scrolling-navbar">
             <div id="menu-open-close">
               <button id="openbtn">&#9776;</button>
-              <button id="closebtn"><i class="fa fa-times-circle"></i></button>
+              <button id="closebtn"><i class="fa fa-angle-double-up"></i></button>
             </div>
             <div class="container">
               <div class="navbar-header">
@@ -93,13 +97,17 @@
               <div class="col-md-10 col-xs-10 col-sm-10">
                 <div class="content-section">
                   {% block content %}{% endblock %}
-                  <div id="refresh-btn"><i class="fa fa-refresh fa-spin fa-lg"></i></div>
                 </div>
+                <div class="alert">
+                    <span class="closebtnalert" onclick="this.parentElement.style.display='none';">&times;</span>
+                    This is an alert box.
+                  </div>
                 </div>
             </div>
           </main>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>

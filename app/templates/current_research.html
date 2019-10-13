@@ -1,6 +1,23 @@
 {%extends "layout.html"%}
+{% block scripts %}
+<script src = "{{ url_for('static', filename = 'current_research.js') }}" ></script>
+{% endblock scripts%}
+
 {%block content%}
-  <h3>Current Research</h3> 
+  <h4>References</h4>
+  <div class="allrefs">
+    {% for ref in data %}
+      <ul>
+        <li class="{{ ref.id }}">
+        <a href="{{ ref.href }}">{{ ref.title }} </a><br>
+        <button class="btn btn-primary loadAbstract">Read abstract</button>
+        <button class="btn btn-primary hideAbstract">Hide abstract</button><br>
+        <div class="abstract_view">{{ ref.abstract }}</div>
+      </li>
+    </ul>
+    {% endfor %}
+  </div>
+
   
 {% endblock content %}
 

@@ -13,9 +13,7 @@ body {
 .bg-steel {
   background-color: #282935;
 }
-/* .fa .fa-sign-in:hover {
-  color: #282935;
-} */
+
 .fa-facebook {
   color:#3b5998;
 }
@@ -44,9 +42,9 @@ body {
   color:#ee220f;
   transform: scale(1.1);
 }
-/* .fa-angle-double-right {
-  font-size: 200%;
-} */
+.fa-angle-double-up {
+  font-size: 150%;
+}
 .fa-tint {
   font-size: 150%;
   padding-right: 5%;
@@ -59,7 +57,7 @@ body {
 .navbar-brand {
   font-family: 'Changa', sans-serif;
   font-size: 200%;
-  margin: 60%; 
+  margin: 0 60%; 
 }
 
 .btn-login {
@@ -189,9 +187,51 @@ body {
     width: 85%;
     /* padding-left: 250px; */
   }
+  .alert {
+    display: none;
+  }
 
    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
    @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px; width: 100px;}
+    .sidebar {padding-top: 15px;}
     .sidebar a {font-size: 12px;}
   }
+  @media screen and (max-width: 1485px) {
+     .content-section {display: none};
+  }
+
+  /* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* The close button */
+.closebtnalert {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtnalert:hover {
+  color: black;
+}
+
+/* ABSTRACT */
+.abstract_view {
+  display: none;
+}
+.loadAbstract {
+  display: block;
+}
+.hideAbstract {
+  display: none;
+}
