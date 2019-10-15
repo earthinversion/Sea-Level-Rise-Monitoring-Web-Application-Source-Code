@@ -1,25 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-    $("li").click(function() {
-        var myClass = this.className;
-        // alert(myClass);
-        if (document.querySelector("."+myClass+" .loadAbstract").style.display == "block") {
-            showabs(myClass)
-        } else {
-            hideabs(myClass)
-        }
-     });
+     var count;
+     var totData = document.getElementsByClassName('loadAbstract').length;
+     for (count = 0; count < totData; count++) {
+        document.querySelector("#user-req-abs-"+count).style.display = "none";
+      }
+    var newcount;
+    $(".loadAbstract").click(function() {
+        var myid = $(this).attr('id');
+        newcount = document.querySelector("#"+myid).dataset.count;
+        if (document.querySelector("#user-req-abs-"+newcount).style.display == "none") {
+            loadAbstract(newcount)
+            } else {
+            hideAbstract(newcount)
+            }
+    });
+
+    $("#restUploadState").click(function() {
+        document.querySelector(".loader").style.display = "block";
+    });
+    
+
 });
 
 
 
-function showabs(myClass) {
-    document.querySelector("."+myClass+" .abstract_view").style.display = "block";
-    document.querySelector("."+myClass+" .loadAbstract").style.display = "none";
-    document.querySelector("."+myClass+" .hideAbstract").style.display = "block";
+function loadAbstract(count) {
+    document.querySelector("#user-req-abs-"+count).style.display = "block";
 }
-function hideabs(myClass) {
-    document.querySelector("."+myClass+" .abstract_view").style.display = "none";
-    document.querySelector("."+myClass+" .loadAbstract").style.display = "block";
-    document.querySelector("."+myClass+" .hideAbstract").style.display = "none";
+function hideAbstract(count) {
+    document.querySelector("#user-req-abs-"+count).style.display = "none";
 }
 

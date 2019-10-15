@@ -4,25 +4,24 @@
       document.getElementById('openbtn').onclick = showSidebar;
       document.getElementById('closebtn').onclick = hideSidebar;
       if (width < 1485) {
-        alert("Screen size too small to view the content")
-      }
+        alert("Screen size too small to view the content");
+      };
+      var document_height = $(document).height();
+      document.querySelector(".sidebar_social_icons").style.paddingTop = document_height-10 + "px";
   });
   
   function showSidebar() {
-    document.getElementById("mySidebar").style.height = "100%";
+    var document_height = $(document).height();
+    document.getElementById("mySidebar").style.height = document_height+"px";
     document.getElementById("openbtn").style.display = "None";
     document.getElementById("closebtn").style.display = "block";
+    document.querySelector(".content-section").style.marginLeft = "250px";
 }
   function hideSidebar() {
     document.getElementById("mySidebar").style.height = "0";
     document.getElementById("openbtn").style.display = "block";
     document.getElementById("closebtn").style.display = "none";
+    document.querySelector(".content-section").style.marginLeft = "10%";
 }
 
-
-
-// var abstractId = document.querySelector('#abstract1');
-// if (abstractId) {
-//   abstractId.textContent = "hello"
-// }
 

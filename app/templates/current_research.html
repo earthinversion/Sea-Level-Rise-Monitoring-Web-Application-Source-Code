@@ -1,21 +1,69 @@
 {%extends "layout.html"%}
 {% block scripts %}
 <script src = "{{ url_for('static', filename = 'current_research.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='current_research.css') }}">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 {% endblock scripts%}
 
 {%block content%}
-  <h4>References</h4>
-  <div class="allrefs">
-    {% for ref in data %}
-      <ul>
-        <li class="{{ ref.id }}">
-        <a href="{{ ref.href }}">{{ ref.title }} </a><br>
-        <button class="btn btn-primary loadAbstract">Read abstract</button>
-        <button class="btn btn-primary hideAbstract">Hide abstract</button><br>
-        <div class="abstract_view">{{ ref.abstract }}</div>
-      </li>
-    </ul>
-    {% endfor %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+              {% for category, message in messages %}
+              <p class="{{category}}" style="padding: 15px; font-weight: bold; color: white; text-align: center;">
+                  {{ message }}<br>
+              </p>
+              {% endfor %}
+      {% endif %}
+  {% endwith %}
+  <div class="loader"></div>
+  <hr>
+  <form action="/upload" class="upload-form" method="POST" enctype="multipart/form-data">
+    <div class="form-group"> <input type="file" name="file"> <button type="submit" name="submit" class="btn btn-primary" id="restUploadState"> Upload bibtex file</button><div class="text-muted"><a href="{{ url_for('what_is_bibtex') }}"><i class="fa fa-info-circle fa-lg"></i> What is bibtex?</a></div> </div>
+  </form>
+  <hr>
+
+
+    <div class="w3-panel w3-leftbar w3-light-grey">
+        <p class=" w3-xlarge w3-serif">
+        <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+        Research is to see what everybody else has seen, and to think what nobody else has thought.</p>
+        <p style="float: right;"> - Albert Szent-Gyorgyi</p>
+      </div>
+
+  <div class="col-12-xs">
+  <table>
+      <thead style="text-align: justify;">
+        <tr>
+          <th>Likes</th>
+          <th>Title</th>
+          <th>Authors</th>
+          <th>Link to read paper</th>
+          <th>Citation</th>
+        </tr>
+      </thead>
+      <tbody style="text-align: justify;">
+        {% for count, ref in data.items() %}
+        <tr>
+          <td><i class="fa fa-thumbs-up"></i></td>
+          <td>{{ ref.Title }}</td>
+          <td>{{ ref.Authors }}</td>
+          <td><button class="btn btn-primary loadAbstract" id="abstract-{{ count }}" data-count="{{ count }}" >Abstract</button>&nbsp;<button class="btn btn-primary readPaper" data-id="{{ ref.ID }}"><a href="{{ ref.url }}" style="color: inherit;" target="_blank">Paper</a></button></td>
+          <td class="td-buttons">
+              <form action="{{ url_for('download_abstract') }}" class="download-form" method="POST">
+                  <input type="hidden" name="abstractkey" value="{{ ref.ID }}">
+                  <button type="submit" class="btn btn-default btn-sm">
+                      <i class="fa fa-download"></i>
+                  </button>
+              </form>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td colspan="3"><div class="abstract-text" id="user-req-abs-{{ count }}">{{ ref.Abstract }} <a href="{{ ref.url }}" target="_blank">Read more</a></div></td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
 
   

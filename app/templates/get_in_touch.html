@@ -1,13 +1,65 @@
 {%extends "layout.html"%}
+{% block scripts %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='get_in_touch.css') }}">
+{% endblock scripts%}
+
 {%block content%}
-  <h3> IES CODERS</h3> 
-  <h4>Team Members</h4>
-  <ul>
-      <li><strong>Utpal Kumar</strong></li>
-      <li><strong>Nguyen Cong Nghiya</strong></li>
-      <li><strong>Kim Chu-Fang Yang</strong></li>
-      <li><strong>Pratul Ranjan Karn</strong></li>
-      <li><strong>Jack Yu</strong></li>
-  </ul>
+<div class="w3-panel w3-leftbar w3-light-grey">
+    <p class=" w3-xlarge w3-serif">
+    <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
+    We know we’re going to have sea rise. This is literally a one-way street now. The only thing we’re discussing now is how fast, it’s not whether anymore, and then eventually how much.</p>
+    <p style="float: right;"> — Dr. Harold Wanless, chairman of the Department of Geological Sciences at the University of Miami</p>
+  </div>
+
+<table class="table table-striped">
+    <thead style="text-align: center;">
+      <tr>
+        <th>Name</th>
+        <th>Affiliation</th>
+        <th>Work place</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody style="text-align: center;">
+      <tr>
+        <td><img src="{{ urldict['utpal_photo'] }}" class="member_photo" ><a href="https://earthinversion.github.io/" target="_blank"> Utpal Kumar</a></td>
+        <td><a href="http://tigp.sinica.edu.tw/ESS.html">TIGP Student</a></td>
+        <td><a href="http://www.earth.sinica.edu.tw/" target="_blank">Institute of Earth Sciences</a>; <a href="https://www.ncu.edu.tw/en" target="_blank">National Central University</a></td>
+        <td>utpalkumar50@gmail.com</td>
+      </tr>
+      <tr>
+        <td>Nguyen Cong Nghiya</td>
+        <td><a href="http://tigp.sinica.edu.tw/ESS.html">TIGP Student</a></td>
+        <td><a href="http://www.earth.sinica.edu.tw/" target="_blank">Institute of Earth Sciences</a>; <a href="https://www.ncu.edu.tw/en" target="_blank">National Central University</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Kim Chu-Fang Yang</td>
+        <td><a href="http://tigp.sinica.edu.tw/ESS.html">TIGP Student</a></td>
+        <td><a href="http://www.earth.sinica.edu.tw/" target="_blank">Institute of Earth Sciences</a>; <a href="https://www.ncu.edu.tw/en" target="_blank">National Central University</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Pratul Ranjan Karn</td>
+        <td><a href="http://tigp.sinica.edu.tw/ESS.html">TIGP Student</a></td>
+        <td><a href="https://www.ncu.edu.tw/en" target="_blank">National Central University</a></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Jack Yu</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <div style="float: right;">
+      <img src="{{ urldict['IES'] }}" alt="Logo" style="width:40px;">
+      <img src="{{ urldict['NCU'] }}" alt="Logo" style="width:40px;">
+      <img src="{{ urldict['NASA'] }}" alt="Logo" style="width:40px;">
+  </div>
 {% endblock content %}
+
+
 

@@ -26,12 +26,13 @@
   </head>
   <body>
       <header class="site-header">
-              <div id="mySidebar" class="sidebar">
-                  <a href="{{ url_for('home') }}"><i class="fa fa-user-md fa-lg"></i> Observations</a>
+              <div id="mySidebar" class="sidebar" aria-expanded="false">
+                  <a href="{{ url_for('observations') }}"><i class="fa fa-user-md fa-lg"></i> Observations</a>
                   <a href="{{ url_for('effects') }}"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
                   <a href="{{ url_for('image_analysis') }}"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
                   <a href="{{ url_for('current_research') }}"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
-                  <a href="{{ url_for('get_in_touch') }}"><i class="fa fa-info-circle fa-lg"></i> Get in Touch</a>
+                  <a href="{{ url_for('get_in_touch') }}"><i class="fa fa-address-book"></i> Get in Touch</a>
+                  <a href="{{ url_for('app_info') }}"><i class="fa fa-info-circle fa-lg"></i> App Info</a>
                   <div class="sidebar_social_icons">
                       <div class="social_icon_text">Share on social media</div>
                       <div class="row">
@@ -54,18 +55,23 @@
                   
                   </div>
                 </div>
-            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top scrolling-navbar">
+            <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div id="menu-open-close">
               <button id="openbtn">&#9776;</button>
               <button id="closebtn"><i class="fa fa-angle-double-up"></i></button>
             </div>
             <div class="container">
               <div class="navbar-header">
-                <a class="navbar-brand" href="#"> <i class="fa fa-tint fa-lg"></i> Sea Level Rise Monitoring</a>
+                <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <i class="fa fa-tint fa-lg"></i> Sea Level Rise Monitoring</a>
                 <!-- <a class="navbar-brand" href="#"> <i class="fa fa-angle-double-right fa-lg"></i> Sea Level Rise Monitoring</a> -->
               </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
                 <ul class="navbar-nav ml-auto nav-flex-icons">
+                    <div class="dashboardBtn">
+                  <li class="nav-item">
+                        <a href="{{ url_for('dashboard') }}" style="text-decoration: none; padding: 5px;">Dashboard <i class="fa fa-tachometer" aria-hidden="true" style="color:red"></i></a>
+                      </li>
+                    </div>
                     <button class="btn-login">
                         <li class="nav-item dropdown">
                           <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
@@ -79,8 +85,8 @@
                             <a class="dropdown-item" href="#"> <i class="fa fa-sign-out fa-lg"></i> Sign out</a>
                             <a class="dropdown-item" href="#"> <i class="fa fa-user-plus fa-lg"></i> Sign up</a>
                           </div>
-      
                         </li>
+                        </button>
               
                 </ul>
               </div>
@@ -90,9 +96,7 @@
 
         <main id="main" class="container-fluid">
             <div class="row">
-              <div class="col-md-2"></div>
-             
-              <div class="col-md-10 col-xs-10 col-sm-10">
+              <div class="col-md-12 col-xs-12 col-sm-12">
                 <div class="content-section">
                   {% block content %}{% endblock %}
                 </div>
