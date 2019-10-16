@@ -6,8 +6,8 @@
       if (width < 1485) {
         alert("Screen size too small to view the content");
       };
-      var document_height = $(document).height();
-      document.querySelector(".sidebar_social_icons").style.paddingTop = document_height-10 + "px";
+      // var document_height = $(document).height();
+      // document.querySelector(".sidebar_social_icons").style.paddingTop = document_height-10 + "px";
   });
   
   function showSidebar() {

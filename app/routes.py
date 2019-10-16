@@ -4,7 +4,7 @@ from app.read_references import readJson
 from app.config import S3_BUCKET, S3_KEY, S3_SECRET
 import boto3
 import json
-from app.read_add_cite import aws_bucket_info, rename_bib_file, read_bib_df
+from app.read_add_cite import aws_bucket_info, rename_bib_file, read_bib_df, add_likes_citations
 
 
 app.secret_key = 'secret'
@@ -107,8 +107,15 @@ def download_abstract():
     return Response(
         file_obj['Body'].read(),
         mimetype = 'text/plain',
-        headers = {'Content-Disposition': 'attachment;filename={}'.format(keyFilename)}
-    )
+        headers = {'Content-Disposition': 'attachment;filename={}'.format(keyFilename)})
+
+@app.route('/add_likes', methods = ['POST'])
+def add_likes():
+    key = request.form['like_to_add']
+    citation_pickle_file = "citations.pkl"
+    add_likes_citations(citation_pickle_file,str(key))
+    return redirect(url_for('current_research'))
+    
 
 @app.route('/what_is_bibtex')
 def what_is_bibtex():

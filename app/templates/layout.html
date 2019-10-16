@@ -27,14 +27,15 @@
   <body>
       <header class="site-header">
               <div id="mySidebar" class="sidebar" aria-expanded="false">
-                  <a href="{{ url_for('observations') }}"><i class="fa fa-user-md fa-lg"></i> Observations</a>
-                  <a href="{{ url_for('effects') }}"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
-                  <a href="{{ url_for('image_analysis') }}"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
-                  <a href="{{ url_for('current_research') }}"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
-                  <a href="{{ url_for('get_in_touch') }}"><i class="fa fa-address-book"></i> Get in Touch</a>
-                  <a href="{{ url_for('app_info') }}"><i class="fa fa-info-circle fa-lg"></i> App Info</a>
+                  <a href="{{ url_for('dashboard') }}" class="{{ 'active' if active_page == 'dashboard' else '' }}"><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</a>
+                  <a href="{{ url_for('observations') }}" class="{{ 'active' if active_page == 'observations' else '' }}"><i class="fa fa-user-md fa-lg"></i> Observations</a>
+                  <a href="{{ url_for('effects') }}" class="{{ 'active' if active_page == 'effects' else '' }}"><i class="fa fa-line-chart fa-lg"></i> Effects</a>
+                  <a href="{{ url_for('image_analysis') }}" class="{{ 'active' if active_page == 'image_analysis' else '' }}"><i class="fa fa-image fa-lg"></i> Image Analysis</a>
+                  <a href="{{ url_for('current_research') }}" class="{{ 'active' if active_page == 'current_research' else '' }}"><i class="fa fa-binoculars fa-lg"></i> Current Research</a>
+                  <a href="{{ url_for('get_in_touch') }}" class="{{ 'active' if active_page == 'get_in_touch' else '' }}"><i class="fa fa-address-book"></i> Get in Touch</a>
+                  <a href="{{ url_for('app_info') }}" class="{{ 'active' if active_page == 'app_info' else '' }}"><i class="fa fa-info-circle fa-lg"></i> App Info</a>
                   <div class="sidebar_social_icons">
-                      <div class="social_icon_text">Share on social media</div>
+                      <div class="social_icon_text" style="color: black;">Share on social media</div>
                       <div class="row">
                       <a class="nav-link waves-effect waves-light" href="#">
                         <i class="fa fa-facebook fa-lg"></i>

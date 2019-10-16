@@ -46,7 +46,8 @@ tr:nth-child(odd):hover {background-color: #f2f2f2;}
 
 .abstract-text {
     font-family: 'Fjalla One', sans-serif;
-    background-color:powderblue;
+    background-color:#f2f2f2;
+    color: black;
 }
 
 
@@ -57,6 +58,15 @@ tr:nth-child(odd):hover {background-color: #f2f2f2;}
     border-top: 16px solid #3498db;
     width: 120px;
     height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+.loader2 {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 40%;
+    height: 40%;
     -webkit-animation: spin 2s linear infinite; /* Safari */
     animation: spin 2s linear infinite;
   }
@@ -72,5 +82,8 @@ tr:nth-child(odd):hover {background-color: #f2f2f2;}
     100% { transform: rotate(360deg); }
   }
   .loader {
+    display: none;
+}
+  .loader2 {
     display: none;
 }

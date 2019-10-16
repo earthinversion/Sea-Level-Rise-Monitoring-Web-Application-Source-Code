@@ -1,4 +1,5 @@
 {%extends "layout.html"%}
+{% set active_page = "current_research" %}
 {% block scripts %}
 <script src = "{{ url_for('static', filename = 'current_research.js') }}" ></script>
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='current_research.css') }}">
@@ -18,7 +19,9 @@
   <div class="loader"></div>
   <hr>
   <form action="/upload" class="upload-form" method="POST" enctype="multipart/form-data">
-    <div class="form-group"> <input type="file" name="file"> <button type="submit" name="submit" class="btn btn-primary" id="restUploadState"> Upload bibtex file</button><div class="text-muted"><a href="{{ url_for('what_is_bibtex') }}"><i class="fa fa-info-circle fa-lg"></i> What is bibtex?</a></div> </div>
+    <div class="form-group"> 
+      <input type="file" name="file"> <button type="submit" name="submit" class="btn btn-primary" id="restUploadState"> Upload bibtex file</button><div class="text-muted"><a href="{{ url_for('what_is_bibtex') }}"><i class="fa fa-info-circle fa-lg"></i> What is bibtex?</a></div> 
+    </div>
   </form>
   <hr>
 
@@ -37,14 +40,23 @@
           <th>Likes</th>
           <th>Title</th>
           <th>Authors</th>
-          <th>Link to read paper</th>
+          <th>Links</th>
           <th>Citation</th>
         </tr>
       </thead>
       <tbody style="text-align: justify;">
         {% for count, ref in data.items() %}
         <tr>
-          <td><i class="fa fa-thumbs-up"></i></td>
+          
+          <td class="td-buttons">
+              <div class="loader2" id="loader2-{{ count }}"></div>
+            <form action="{{ url_for('add_likes') }}" class="likes_add" method="POST">
+                <input type="hidden" name="like_to_add" value="{{ ref.ID }}">
+                <button type="submit" class="btn btn-default btn-sm likeclick" id="likeclickevent-{{ count }}" data-count="{{ count }}">
+                  <i class="fa fa-thumbs-up"></i> {{ ref.numLikes }}
+                </button>
+            </form>
+        </td>
           <td>{{ ref.Title }}</td>
           <td>{{ ref.Authors }}</td>
           <td><button class="btn btn-primary loadAbstract" id="abstract-{{ count }}" data-count="{{ count }}" >Abstract</button>&nbsp;<button class="btn btn-primary readPaper" data-id="{{ ref.ID }}"><a href="{{ ref.url }}" style="color: inherit;" target="_blank">Paper</a></button></td>

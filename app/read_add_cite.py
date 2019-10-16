@@ -25,8 +25,10 @@ def aws_bucket_info():
 
 
 def create_bib_df(pickle_filename=pickle_filename):
-    df = pd.DataFrame(columns=['ID','numLikes', 'Title', 'Authors', 'url', 'Abstract','Images'])
+    # my_bucket, s3_resource = aws_bucket_info()
+    df = pd.DataFrame(columns=['ID','numLikes', 'Title', 'Authors', 'url', 'Abstract'])
     df.to_pickle(pickle_filename)
+    
 
 def read_bib_df(citation_pickle_file=citation_pickle_file):
     my_bucket, s3_resource = aws_bucket_info()
@@ -34,6 +36,17 @@ def read_bib_df(citation_pickle_file=citation_pickle_file):
     body_string = response['Body'].read()
     df = cPickle.loads(body_string)
     return df
+
+def add_likes_citations(citation_pickle_file,ids):
+    my_bucket, s3_resource = aws_bucket_info()
+    df = read_bib_df(citation_pickle_file=citation_pickle_file)
+    idx = df.index[df['ID']==str(ids)]
+    df.loc[idx,'numLikes'] += 1
+    df.sort_values(by=['numLikes'], ascending=False, inplace=True)
+    df.reset_index(drop=True,inplace=True)
+    # df.set_index('ID',inplace=True)
+    serializedMyData = pickle.dumps(df)
+    my_bucket.Object(citation_pickle_file).put(Body=serializedMyData)
 
 def store_bib_in_df(dict_to_store,citation_pickle_file=citation_pickle_file):
     my_bucket, s3_resource = aws_bucket_info()
@@ -43,9 +56,9 @@ def store_bib_in_df(dict_to_store,citation_pickle_file=citation_pickle_file):
     output = output.append(dict_to_store, ignore_index=True)
     output.sort_values(by=['numLikes'], ascending=False, inplace=True)
     output.reset_index(drop=True,inplace=True)
+    # output.set_index('ID',inplace=True)
     serializedMyData = pickle.dumps(output)
     my_bucket.Object(citation_pickle_file).put(Body=serializedMyData)
-    # s3.meta.client.put_object(Bucket=S3_BUCKET, Key=citation_pickle_file,Body=serializedMyData)
     
 
 
@@ -57,7 +70,7 @@ def read_bib_file(filename):
     parser.customization = convert_to_unicode
     bibtex_database = bibtexparser.loads(bibtex_file, parser=parser)
     entries = bibtex_database.entries[0]
-    dict_to_store = {'ID':entries['ID'],'numLikes':0, 'Title':entries['title'], 'Authors':entries['author'], 'url':"", 'Abstract':"",'Images':""}
+    dict_to_store = {'ID':entries['ID'],'numLikes':0, 'Title':entries['title'], 'Authors':entries['author'], 'url':"", 'Abstract':""}
     return dict_to_store
 
 def rename_bib_file(citeDir,filename):
@@ -78,7 +91,7 @@ def rename_bib_file(citeDir,filename):
                 search_output.append(res.bib[ss])
             except:
                 search_output.append("")
-        dict_to_store = {'ID':entries['ID'],'numLikes':0, 'Title':entries['title'], 'Authors':entries['author'], 'url':search_output[0], 'Abstract':search_output[1],'Images':""}
+        dict_to_store = {'ID':entries['ID'],'numLikes':0, 'Title':entries['title'], 'Authors':entries['author'], 'url':search_output[0], 'Abstract':search_output[1]}
         store_bib_in_df(dict_to_store,citation_pickle_file=citation_pickle_file)
         new_bibfile = citeDir+entries['ID']+"_slrm.bib"
         return new_bibfile
@@ -91,8 +104,10 @@ if __name__=="__main__":
     # store_bib_in_df(read_bib_file(filename),citation_pickle_file=citation_pickle_file)
     # df = read_bib_df()
     # print(df.head())
-    search_query = scholarly.search_pubs_query('Perception of physical stability and center of mass of 3D objects')
-    res = next(search_query)
-    print(res.bib)
-    print('\nABSTRACT: \n',res.bib['abstract'])
-    print(res.bib.keys())
+    # search_query = scholarly.search_pubs_query('Perception of physical stability and center of mass of 3D objects')
+    # res = next(search_query)
+    # print(res.bib)
+    # print('\nABSTRACT: \n',res.bib['abstract'])
+    # print(res.bib.keys())
+    print(add_likes('church200620th'))
+    # print(add_likes('bruun1962sea'))

@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     $("#restUploadState").click(function() {
         document.querySelector(".loader").style.display = "block";
     });
+    $(".likeclick").click(function() {
+        var myid = $(this).attr('id');
+        newcount = document.querySelector("#"+myid).dataset.count;
+        document.querySelector("#loader2-"+newcount).style.display = "block";
+        document.querySelector("#"+myid).style.display = "none";
+    });
     
 
 });
