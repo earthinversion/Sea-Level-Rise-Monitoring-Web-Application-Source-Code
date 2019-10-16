@@ -3,7 +3,7 @@
 
       document.getElementById('openbtn').onclick = showSidebar;
       document.getElementById('closebtn').onclick = hideSidebar;
-      if (width < 1485) {
+      if (width < 800) {
         alert("Screen size too small to view the content");
       };
       // var document_height = $(document).height();
