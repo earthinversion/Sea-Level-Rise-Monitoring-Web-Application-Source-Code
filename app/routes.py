@@ -34,7 +34,17 @@ def dashboard():
 
 @app.route('/observations')
 def observations():
-    return render_template('observations.html')
+    images = ['image1','image2']
+    allurls = {}
+    for image in images:
+        allurls[image] = readImage(f"observations/{image}.jpg")
+
+    # print(allurls)
+
+    # url1 = readImage("observations/image1.jpg")
+    # url2 = readImage("observations/image2.jpg")
+    # print(url1)
+    return render_template('observations.html', allurls = allurls)
 
 @app.route('/effects')
 def effects():
@@ -42,7 +52,8 @@ def effects():
 
 @app.route('/image_analysis')
 def image_analysis():
-    return render_template('image_analysis.html')
+    imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
+    return render_template('image_analysis.html',imageurl=imageurl)
     
 @app.route('/current_research')
 def current_research():

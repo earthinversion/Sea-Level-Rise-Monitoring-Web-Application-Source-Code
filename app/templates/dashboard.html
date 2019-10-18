@@ -1,8 +1,13 @@
 {%extends "layout.html"%}
 {% set active_page = "dashboard" %}
+{% block scripts %}
+<script src = "{{ url_for('static', filename = 'dashboard.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='dashboard.css') }}">
+{% endblock scripts%}
 {%block content%}
-<i class="fa fa-tachometer" aria-hidden="true" style="color:red"></i>
+<i class="fa fa-tachometer" aria-hidden="true" style="color:red;"></i>
   <h3>This is dashboard</h3>
+
   <div style="float: right;">
       <img src="{{ urldict['IES'] }}" alt="Logo" style="width:60px;">
       <img src="{{ urldict['NCU'] }}" alt="Logo" style="width:60px;">

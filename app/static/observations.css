@@ -1,0 +1,101 @@
+
+  .content-section {
+      margin-left: 0px;
+      width: 100%;
+  }
+
+  #wrapper{
+    position: relative;
+    width:100%;
+    min-height:50vw;
+    overflow: hidden;
+  }
+  
+  .layer{
+    position: absolute;
+    width:100vw;
+    min-height: 50vw;
+    overflow: hidden;
+  }
+  
+  .layer .content-wrap{
+    position: absolute;
+    width:100vw;
+    min-height: 50vw;
+  }
+  
+  .layer img{
+    position: absolute;
+    width:70%;
+    top:0;
+    left: 50%;
+    transform:translate(-50%, -50%);
+  }
+  
+  .layer h1{
+    font-size:2em;
+  }
+  
+  .bottom{
+    background:#222;
+    z-index:1;
+  }
+  
+  .bottom .content-body{
+    /* right:5%; */
+    width: 20%;
+    padding: 5% 5% 5% 1%;
+  }
+  
+  .bottom h1{
+    color:#FDAB00;
+  }
+  
+  .top{
+    background:#eee;
+    color:#222;
+    z-index:2;
+    width:50vw;
+  }
+  
+  .top .content-body{
+    /* left: 5%; */
+    color:#222;
+    width: 20%;
+    padding: 5% 5% 5% 1%;
+  }
+  
+  .handle{
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: white;
+    width:5px;
+    top:0;
+    left: 52%;
+    z-index:3;
+  }
+  
+  /* .skewed .handle{
+    top:50%;
+    transform:rotate(30deg) translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+  }
+  
+  .skewed .top{
+    transform: skew(-30deg);
+    margin-left:-1000px;
+    width: calc(50vw + 1000px);
+  }
+  
+  .skewed .top .content-wrap{
+    transform: skew(30deg);
+    margin-left:1000px;
+  } */
+  
+  @media(max-width:768px){
+    body{
+      font-size:75%;
+    }
+  }

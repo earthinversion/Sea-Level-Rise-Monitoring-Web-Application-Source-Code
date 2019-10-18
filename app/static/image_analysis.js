@@ -1,55 +1,32 @@
-{%extends "layout.html"%}
-{% set active_page = "image_analysis" %}
-{% block scripts %}
-<script src = "{{ url_for('static', filename = 'image_analysis.js') }}" ></script>
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='image_analysis.css') }}">
+// document.addEventListener('DOMContentLoaded', function() {
+// // Slider
+// var slider = document.getElementById("mysliderid");
+// var slidervalue = document.getElementById("slidervalue");
 
-<script>
-    L_NO_TOUCH = false;
-    L_DISABLE_3D = false;
-</script>
+// slidervalue.innerHTML = slider.value
 
-<script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/> -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/> -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
-<link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
-<!-- <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style> -->
-<!-- <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style> -->
+// slider.oninput = function() {
+//     slidervalue.innerHTML = this.value;
+//     console.log(this.value)
+//     document.getElementById("imageid").src = "/Users/utpalkumar50/Downloads/iphonePics/"+"iphone"+this.value+".jpeg";
+// }
+// });
 
-<meta name="viewport" content="width=device-width,
-                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-{% endblock scripts%}
 
-{% block content %}
-<div class="folium-map" id="map_fd64a4e2cbbe42cfac845504f2f3c621" ></div>
-<!-- <div class="sliderContainer">
-    Time slider: <input type="range" name="points" min="1" max="3" step="1" value="1" id="mysliderid" class="mysliderclass">
-    <p>Value: <span id="slidervalue"></span></p>
-    <img src="{{ imageurl }}/img_yehliu_cluster0_20120214_221715.jpg" id="imageid">
-  </div> -->
-{% endblock %}
-
-<script>    
-    
+document.addEventListener('DOMContentLoaded', function() {
     var map_fd64a4e2cbbe42cfac845504f2f3c621 = L.map(
         "map_fd64a4e2cbbe42cfac845504f2f3c621",
         {
             center: [24.0, 121.0],
             crs: L.CRS.EPSG3857,
-            zoom: 8,
+            zoom: 7,
             zoomControl: true,
             preferCanvas: false,
         }
     );
+
+    
+
 
 
     var tile_layer_1fc7c8e826784ce7bcad31891671355c = L.tileLayer(
@@ -73,6 +50,8 @@ var popup_65964bc7ed3f4b61aac0b8774f588902 = L.popup({"maxWidth": 1000});
 
 marker_b7983646c4e64c0b97ac4ee67f462e28.bindPopup(popup_65964bc7ed3f4b61aac0b8774f588902)
 ;
+
+
 
 
     var marker_47c9a4f2d21541089ffbfbcfa61687a9 = L.marker(
@@ -110,7 +89,4 @@ var popup_6e8d5739459f47d4a5b528aca6839f73 = L.popup({"maxWidth": 1000});
 marker_8af0d0ed46774fcba8a8e1c4d89959c3.bindPopup(popup_6e8d5739459f47d4a5b528aca6839f73)
 ;
 
-
-
-</script>
-
+})

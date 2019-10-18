@@ -4,8 +4,13 @@
       <!-- Required meta tags -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-      <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/v4-shims.css">
+      <!-- <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css"> -->
+      <!-- <link href="{{ url_for('static', filename='all.css') }}" rel="stylesheet"> -->
+      <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -16,6 +21,8 @@
       <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
       <script src = "{{ url_for('static', filename = 'myscripts.js') }}" ></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
       {% block scripts %}{% endblock scripts%}
 
       {% if title %}
@@ -63,31 +70,16 @@
             </div>
             <div class="container">
               <div class="navbar-header">
-                <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="/static/slr.gif" style="width:40px;"> Sea Level Rise Monitoring</a>
-                <!-- <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <i class="fa fa-tint fa-lg"></i> Sea Level Rise Monitoring</a> -->
+                <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="static/f3f5c1198c0f1a37e6ff46fccfd30244_1.svg" style="width:40px;"> Sea Level Rise Monitoring</a>
+                <!-- <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <i class="fa fa-water"></i><i class="fa fa-satellite-dish"></i> Sea Level Rise Monitoring </a> -->
               </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
                 <ul class="navbar-nav ml-auto nav-flex-icons">
                     <div class="dashboardBtn">
                   <li class="nav-item">
-                        <a href="{{ url_for('dashboard') }}" style="text-decoration: none; padding: 5px;">Dashboard <i class="fa fa-tachometer" aria-hidden="true" style="color:red"></i></a>
+                        <a href="{{ url_for('dashboard') }}" style="text-decoration: none; padding: 5px;">Dashboard <i class="fa fa-tachometer" aria-hidden="true" style="color:white"></i></a>
                       </li>
                     </div>
-                    <button class="btn-login">
-                        <li class="nav-item dropdown">
-                          <div class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-333" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
-                            <a id="login-text">Sign in </a>
-                            <i class="fa fa-sign-in fa-lg"></i>
-                        </div>
-                          <div class="dropdown-menu dropdown-menu-right dropdown-default"
-                            aria-labelledby="navbarDropdownMenuLink-333">
-                            <a class="dropdown-item" href="#"> <i class="fa fa-sign-in fa-lg"></i> Sign in</a>
-                            <a class="dropdown-item" href="#"> <i class="fa fa-sign-out fa-lg"></i> Sign out</a>
-                            <a class="dropdown-item" href="#"> <i class="fa fa-user-plus fa-lg"></i> Sign up</a>
-                          </div>
-                        </li>
-                        </button>
               
                 </ul>
               </div>
@@ -96,8 +88,7 @@
         </header>
 
         <main id="main" class="container-fluid">
-            <div class="row">
-              <div class="col-md-12 col-xs-12 col-sm-12">
+            
                 <div class="content-section">
                   {% block content %}{% endblock %}
                 </div>
@@ -105,13 +96,11 @@
                     <span class="closebtnalert" onclick="this.parentElement.style.display='none';">&times;</span>
                     This is an alert box.
                   </div>
-                </div>
-            </div>
+                
           </main>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
     <!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
   </body>
 </html>

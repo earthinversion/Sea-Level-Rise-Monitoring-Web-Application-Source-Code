@@ -4,6 +4,7 @@ body {
   background: white;
   margin: 0;
   position: relative; 
+  font-family: Arial, Helvetica, sans-serif;
 }
 .site-header {
   width: 100%;
@@ -12,8 +13,8 @@ body {
     color: #444444;
 }
 
-.bg-steel {
-  background-color: #43498a;
+.bg-steel, .sidebar {
+  background-color: rgb(45, 62, 73);
 }
 
 .fa-facebook {
@@ -53,7 +54,7 @@ body {
 }
 
 .sidebar_social_icons {
-  margin-top: 50%;
+  margin-top: 120%;
   background-color: rgb(179, 178, 178);
 }
 
@@ -116,13 +117,12 @@ body {
 }
 
 .sidebar {
-    width: 250px; /* 0 Full-width*/
+    width: 13%; /* 0 Full-width*/
     height: 0; /* height - change this with JavaScript */
     position: absolute;  /*Stay in place*/
     z-index: 10; 
     top: 0;
     left: 0;
-    background-color: #43498a; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 68px; /* Place content 300px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -141,6 +141,7 @@ body {
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
     color: #818181;
+    text-decoration: none;
   }
   
 
