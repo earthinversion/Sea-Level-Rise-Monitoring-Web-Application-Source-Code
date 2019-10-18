@@ -30,7 +30,13 @@ def readImage(path):
 @app.route('/')
 def dashboard():
     urlLogo = logo_url_retrieve()
-    return render_template('dashboard.html',urldict = urlLogo)
+
+    images = ['observations','effects','image_analysis','current_research','get_in_touch','app_info']
+    allurls = {}
+    for image in images:
+        allurls[image] = readImage(f"dashboardPreview/{image}.png")
+
+    return render_template('dashboard.html',urldict = urlLogo, allurls = allurls)
 
 @app.route('/observations')
 def observations():
@@ -39,11 +45,6 @@ def observations():
     for image in images:
         allurls[image] = readImage(f"observations/{image}.jpg")
 
-    # print(allurls)
-
-    # url1 = readImage("observations/image1.jpg")
-    # url2 = readImage("observations/image2.jpg")
-    # print(url1)
     return render_template('observations.html', allurls = allurls)
 
 @app.route('/effects')
