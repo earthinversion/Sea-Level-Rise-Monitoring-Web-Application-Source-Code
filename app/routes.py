@@ -31,10 +31,10 @@ def readImage(path):
 def dashboard():
     urlLogo = logo_url_retrieve()
 
-    images = ['observations','effects','image_analysis','current_research','get_in_touch','app_info']
+    images = ['observations','effects','clustering','current_research']
     allurls = {}
     for image in images:
-        allurls[image] = readImage(f"dashboardPreview/{image}.png")
+        allurls[image] = readImage(f"dashboardPreview/{image}.jpg")
 
     return render_template('dashboard.html',urldict = urlLogo, allurls = allurls)
 
@@ -43,7 +43,7 @@ def observations():
     images = ['observations','time_slider']
     allurls = {}
     for image in images:
-        allurls[image] = readImage(f"observations/{image}.png")
+        allurls[image] = readImage(f"observations/{image}.jpg")
     return render_template('observations.html',allurls=allurls)
 
 @app.route('/observations/image_comparison')
@@ -73,10 +73,10 @@ def image_analysis():
     imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
     return render_template('image_analysis.html',imageurl=imageurl)
 
-@app.route('/image_analysis/yehliu_image_analysis')
-def yehliu_image_analysis():
-    imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
-    return render_template('yehliu_image_analysis.html',imageurl=imageurl)
+# @app.route('/image_analysis/yehliu_image_analysis')
+# def yehliu_image_analysis():
+#     imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
+#     return render_template('yehliu_image_analysis.html',imageurl=imageurl)
     
 
 

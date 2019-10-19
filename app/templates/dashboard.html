@@ -22,64 +22,75 @@
     </div>
   
 </div>
-<div class="row bokeh_plot" >
-  <div class="bk-root" id="fc7fca03-00b0-4af6-9de6-cf224170bf16" data-root-id="1006" style="margin-left: 25%;"></div>  
-</div>
-<div class="row">
-  <div class="phenomenons" style="font-size: 100%; margin-top: 3%; margin-left: 35%; margin-bottom: 2%;">
-    <table class="table table-striped">
-        <thead>
-          <th>Phen.</th>
-          <th>Rate</th>
-          <th>Min</th>
-          <th>Max</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              Atmos. CO2
-            </td>
-            <td>14 ppm/yr</td>
-            <td>354 ppm</td>
-            <td>414.66 ppm</td>
-          </tr>
-          <tr>
-            <td>
-              Global Temp. Change
-            </td>
-            <td>0.031 degC/yr/yr</td>
-            <td>0.23 degC/yr</td>
-            <td>1.01 degC/yr</td>
-          </tr>
-          <tr>
-            <td>
-              Antartica Mass Var.
-            </td>
-            <td>-138 Gt/yr</td>
-            <td>-1924 Gt</td>
-            <td>179.38 Gt</td>
-          </tr>
-          <tr>
-            <td>
-              Greenland Mass Var.
-            </td>
-            <td>-259 Gt/yr</td>
-            <td>-3910 Gt</td>
-            <td>12.45 Gt</td>
-          </tr>
-          <tr style="color: red;">
-            <td>
-              Global Sea Level Change
-            </td>
-            <td>3.58 mm/yr</td>
-            <td>-38.06 mm</td>
-            <td>57.09 mm</td>
-          </tr>
-          
-        </tbody>
-      </table>
-</div></div>
+
 <div class="all_content">
+    <div class="row bokeh_plot" >
+        <div class="bk-root" id="fc7fca03-00b0-4af6-9de6-cf224170bf16" data-root-id="1006" style="margin-left: 15%;"></div>  
+      </div>
+      <div class="row">
+        <div class="phenomenons" style="font-size: 100%; margin-top: 3%; margin-left: 20%; margin-bottom: 2%;">
+          <table class="table table-striped">
+              <thead>
+                <th>Phen.</th>
+                <th>Rate</th>
+                <th>Min</th>
+                <th>Max</th>
+                <th>Data</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Atmos. CO2
+                  </td>
+                  <td>14 ppm/yr</td>
+                  <td>354 ppm</td>
+                  <td>414.66 ppm</td>
+                  <td><a href="https://climate.nasa.gov/vital-signs/carbon-dioxide/">Download</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    Global Temp. Change
+                  </td>
+                  <td>0.031 degC/yr/yr</td>
+                  <td>0.23 degC/yr</td>
+                  <td>1.01 degC/yr</td>
+                  <td><a href="https://climate.nasa.gov/vital-signs/global-temperature/">Download</a></td>
+
+                </tr>
+                <tr>
+                  <td>
+                    Antartica Mass Var.
+                  </td>
+                  <td>-138 Gt/yr</td>
+                  <td>-1924 Gt</td>
+                  <td>179.38 Gt</td>
+                  <td><a href="https://climate.nasa.gov/vital-signs/ice-sheets/">Download</a></td>
+
+                </tr>
+                <tr>
+                  <td>
+                    Greenland Mass Var.
+                  </td>
+                  <td>-259 Gt/yr</td>
+                  <td>-3910 Gt</td>
+                  <td>12.45 Gt</td>
+                  <td><a href="https://climate.nasa.gov/vital-signs/ice-sheets/">Download</a></td>
+
+                </tr>
+                <tr style="color: red;">
+                  <td>
+                    Global Sea Level Change
+                  </td>
+                  <td>3.58 mm/yr</td>
+                  <td>-38.06 mm</td>
+                  <td>57.09 mm</td>
+                  <td><a href="https://climate.nasa.gov/vital-signs/sea-level/">Download</a></td>
+
+                </tr>
+                
+              </tbody>
+            </table>
+      </div></div>
 <div class="row cardrow1">
 
     <div class="card cardleft">
@@ -105,7 +116,7 @@
 <div class="row cardrow2">
     <div class="card cardleft">
         <a href="{{ url_for('image_analysis') }}" style="text-decoration: none;">
-        <img src="{{ allurls['image_analysis'] }}" alt="image_analysis" style="width:100%;">
+        <img src="{{ allurls['clustering'] }}" alt="image_analysis" style="width:100%;">
         <div class="card-content">
           <h4><b>IMAGE ANALYSIS</b></h4> 
           <p style="color: gray;">Sea level rise investigation using the machine learning infusion</p> 
