@@ -72,7 +72,14 @@ def effects():
 def image_analysis():
     imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
     return render_template('image_analysis.html',imageurl=imageurl)
+
+@app.route('/image_analysis/yehliu_image_analysis')
+def yehliu_image_analysis():
+    imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
+    return render_template('yehliu_image_analysis.html',imageurl=imageurl)
     
+
+
 @app.route('/current_research')
 def current_research():
     my_bucket, s3_resource= aws_bucket_info()

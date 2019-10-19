@@ -1,0 +1,10 @@
+{%extends "layout.html"%}
+{% set active_page = "image_analysis" %}
+{% block scripts %}
+<script src = "{{ url_for('static', filename = 'yehliu_image_analysis.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='yehliu_image_analysis.css') }}">
+{% endblock scripts%}
+{%block content%}
+
+{% endblock content %}
+
