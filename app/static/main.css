@@ -61,7 +61,7 @@ body {
 .navbar-brand {
   font-family: 'Fjalla One', sans-serif;
   font-size: 200%;
-  margin: 0; 
+  margin-left: 50%; 
 }
 .dashboardBtn {
   text-decoration: none;
@@ -125,7 +125,7 @@ body {
     left: 0;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 68px; /* Place content 300px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    transition: 0.5s ease-in-out; /* 0.5 second transition effect to slide in the sidebar */
   }
   
   /* The sidebar links */
@@ -135,7 +135,7 @@ body {
     font-size: 16px;
     color: #f1f1f1;
     display: block;
-    transition: 0.1s;
+    transition: 0.1s ease-in-out;
   }
   
   /* When you mouse over the navigation links, change their color */
@@ -199,7 +199,7 @@ body {
     margin: 10% 10% 10% 10%;
     margin-top: 5rem;
     width: 85%;
-    transition: margin-left .5s;
+    transition: margin-left .5s ease-in-out;
     padding: 20px;
     /* padding-left: 250px; */
   }
@@ -233,7 +233,7 @@ body {
   font-size: 22px;
   line-height: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 /* When moving the mouse over the close button */

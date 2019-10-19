@@ -70,7 +70,9 @@
             </div>
             <div class="container">
               <div class="navbar-header">
-                <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="static/f3f5c1198c0f1a37e6ff46fccfd30244_1.svg" style="width:40px;"> Sea Level Rise Monitoring</a>
+                <!-- <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="https://github.com/earthinversion/logoStore/blob/master/satellite_v2.svg" style="width:40px;"> Sea Level Rise Monitoring</a> -->
+                <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="{{ url_for('static', filename='satellite_v2.svg') }}" style="width:40px;"> Sea Level Rise Monitoring</a>
+                <!-- <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <img src="static/satellite_v2.svg" style="width:40px;"> Sea Level Rise Monitoring</a> -->
                 <!-- <a class="navbar-brand" href="{{ url_for('dashboard') }}"> <i class="fa fa-water"></i><i class="fa fa-satellite-dish"></i> Sea Level Rise Monitoring </a> -->
               </div>
               <div class="collapse navbar-collapse" id="navbarSupportedContent-333">

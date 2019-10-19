@@ -40,12 +40,29 @@ def dashboard():
 
 @app.route('/observations')
 def observations():
-    images = ['image1','image2']
+    images = ['observations','time_slider']
+    allurls = {}
+    for image in images:
+        allurls[image] = readImage(f"observations/{image}.png")
+    return render_template('observations.html',allurls=allurls)
+
+@app.route('/observations/image_comparison')
+def observations_imageComp():
+    images = ['montana_before','montana_after']
     allurls = {}
     for image in images:
         allurls[image] = readImage(f"observations/{image}.jpg")
+    # print(allurls)
+    return render_template('image_comparison.html', allurls = allurls)
 
-    return render_template('observations.html', allurls = allurls)
+@app.route('/observations/timeSlider')
+def timeSlider():
+    urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/"
+    images = ['kaoshiung_055','kaoshiung_063','kaoshiung_082','kaoshiung_3']
+    # allurls = []
+    # for image in images:
+    #     allurls.append(readImage(f"simulatedInundation/{image}.jpg"))
+    return render_template('timeSlider.html')
 
 @app.route('/effects')
 def effects():

@@ -3,8 +3,14 @@
     width: 100%;
 }
 .all_content {
-    margin-left: 5%;
-    margin-right: 5%;
+    position: absolute;
+    /* left: 20%; */
+    margin-bottom: 5%;
+    padding-left: 10%;
+    margin-right: 0;
+}
+.bokeh_plot {
+  padding-left: -5%;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -13,10 +19,10 @@
     border-radius: 5px;
   }
   .cardleft {
-      margin-right: 5%;
+      margin-right: 3%;
   }
   .cardright {
-      margin-left: 5%;
+      margin-left: 3%;
   }
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -29,9 +35,10 @@
   .card-content {
     padding: 2px 16px;
     text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
   }
 
   .cardrow2 {
-      margin-top: 10%;
+      margin-top: 5%;
   }
   

@@ -16,7 +16,8 @@
     document.getElementById("closebtn").style.display = "block";
     document.querySelector(".content-section").style.marginLeft = "13%";    
     document.querySelector(".content-section").style.width = "87%";
-    // document.querySelector(".content-section").style.transition = "width .5s";
+    document.querySelector(".content-section").style.transition = "width .5s ease-in-out";
+    document.querySelector(".content-section").style.transition = "margin-left .5s ease-in-out";
 }
   function hideSidebar() {
     document.getElementById("mySidebar").style.height = "0";
@@ -24,7 +25,8 @@
     document.getElementById("closebtn").style.display = "none";
     document.querySelector(".content-section").style.marginLeft = "0px";
     document.querySelector(".content-section").style.width = "100%";
-    // document.querySelector(".content-section").style.transition = "width .1s";
+    document.querySelector(".content-section").style.transition = "width .5s ease-in-out";
+    document.querySelector(".content-section").style.transition = "margin-left .5s ease-in-out";
 
 }
 

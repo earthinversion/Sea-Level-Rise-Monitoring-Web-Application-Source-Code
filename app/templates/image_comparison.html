@@ -1,0 +1,43 @@
+
+{%extends "layout.html"%}
+{% set active_page = "observations" %}
+{% block scripts %}
+<script src = "{{ url_for('static', filename = 'image_comparison.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='image_comparison.css') }}">
+{% endblock scripts%}
+{%block content%}
+<div class="row select_region" style="display: flex; margin-bottom: 5%;">
+    <div class="col-md-2"></div>
+    <button class="col-md-3 button button1">Montana's Glacier National Park</button>
+    <div class="col-md-2"></div>
+    <button class="col-md-3 button button1">North Patagonian Icefield, Chile</button>
+    <div class="col-md-2"></div>
+</div>
+  <section id="wrapper" class="skewed">
+    
+    <div class="layer bottom">
+      <div class="content-wrap">
+          <div class="content-body" style="color: white;">
+              <h1>Montana 2019</h1>
+              <p>Temperatures in western Montana have increased at a rate almost double the global average.</p>
+            </div>
+            <img src="{{ allurls['montana_after'] }}" alt="">
+      </div>
+    </div>
+
+    <div class="layer top">
+        <div class="content-wrap">
+            <div class="content-body">
+                <h1>Montana 1985</h1>
+                <p>Montana's glacier have been reduced by as much as 85 percent over the past 50 years.</p>
+              </div>
+          
+          <img src="{{ allurls['montana_before'] }}" alt="">
+        </div>
+      </div>
+
+      <div class="handle"></div>
+    </section>
+
+{% endblock content %}
+

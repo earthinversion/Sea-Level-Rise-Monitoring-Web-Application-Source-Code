@@ -1,0 +1,40 @@
+{%extends "layout.html"%}
+{% set active_page = "observations" %}
+{% block scripts %}
+<script src = "{{ url_for('static', filename = 'timeSlider.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='timeSlider.css') }}">
+
+{% endblock scripts%}
+{%block content%}
+<div class="row">
+        <!-- <select class="region-select" style="width:200px;">
+            <option value="Kaohsiung">Kaohsiung</option>
+            <option value="Tuvalu_Vaitupu">Tuvalu-Vaitupu</option>
+            </select> -->
+            <!-- <div class="region_value">
+                    <a href="#" class="active_region" id="kaohsiung_region"><i class="fas fa-image"></i> Kaohsiung</a>
+                    <a href="#" id="tuvalu_region" class=""><i class="fas fa-image"></i> Tuvalu-Vaitupu</a>            
+                    <a href="#" id="taipei_region" class=""><i class="fas fa-image"></i> Taipei</a>            
+            </div> -->
+            <div class="row region_value" style="display: flex; margin-bottom: 5%;">
+                    <div class="col-md-2"></div>
+                    <button class="col-md-2 button button1 active_region" id="kaohsiung_region"><i class="fas fa-image"></i> Kaohsiung</button>
+                    <div class="col-md-1"></div>
+                    <button class="col-md-2 button button1" id="tuvalu_region"><i class="fas fa-image"></i> Tuvalu-Vaitupu</button>
+                    <div class="col-md-1"></div>
+                    <button class="col-md-2 button button1" id="taipei_region"><i class="fas fa-image"></i> Taipei</button>
+                    <div class="col-md-2"></div>
+                </div>
+</div>
+
+<div class="row">
+<div class="sliderContainer">     
+    <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
+    <p id="sliderticks"></p>
+    <p style="text-align: center;">Sea level rise: <span id="slidervalue"></span></p>
+    <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/kaoshiung_055_1.jpg" id="imageid">
+</div>
+<div class="imageSlider"></div>
+</div>
+{% endblock content %}
+

@@ -5,29 +5,27 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='observations.css') }}">
 {% endblock scripts%}
 {%block content%}
-  <section id="wrapper" class="skewed">
-    <div class="layer bottom">
-      <div class="content-wrap">
-          <div class="content-body" style="color: white;">
-              <h1>Look Sharp</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam temporibus dolore vero reiciendis atque debitis. Sequi at consequatur deserunt?</p>
-            </div>
-        <img src="{{ allurls['image1'] }}" alt="">
-      </div>
-    </div>
-
-    <div class="layer top">
-        <div class="content-wrap">
-            <div class="content-body">
-                <h1>Stay Cool</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quisquam temporibus dolore vero reiciendis atque debitis. Sequi at consequatur deserunt?</p>
-              </div>
-          <img src="{{ allurls['image2'] }}" alt="">
+<div class="all_content">
+  
+  <div class="row cardrow1">  
+      <div class="card cardleft">
+          <a href="{{ url_for('observations_imageComp') }}" style="text-decoration: none;">
+          <img src="{{ allurls['observations'] }}" alt="observations_imageComp" style="width:100%;">
+          <div class="card-content">
+            <h4><b>Compare the ice content in the past and present</b></h4> 
+          </div>
+        </a>
         </div>
-      </div>
-
-      <div class="handle"></div>
-    </section>
+      
+      <div class="card cardright">
+          <a href="{{ url_for('timeSlider') }}" style="text-decoration: none;">
+          <img src="{{ allurls['time_slider'] }}" alt="timeSlider" style="width:100%;">
+          <div class="card-content">
+            <h4><b>Observe the sea level change with time</b></h4> 
+          </div>
+        </a>
+        </div>
+  </div>
 
 {% endblock content %}
 
