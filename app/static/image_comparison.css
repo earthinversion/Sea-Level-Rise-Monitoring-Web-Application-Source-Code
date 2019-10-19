@@ -4,27 +4,27 @@
     width: 100%;
 }
 
-#wrapper{
+#wrapper, #wrapper2 {
   position: relative;
   width:100%;
   min-height:50vw;
   overflow: hidden;
 }
 
-.layer{
+.layer, .layer2{
   position: absolute;
   width:100vw;
   min-height: 50vw;
   overflow: hidden;
 }
 
-.layer .content-wrap{
+.layer .content-wrap, .layer2 .content-wrap{
   position: absolute;
   width:100vw;
   min-height: 50vw;
 }
 
-.layer img{
+.layer img, .layer2 img{
   position: absolute;
   width:100%;
   top:0;
@@ -32,34 +32,34 @@
   transform:translate(-50%, 25%);
 }
 
-.layer h1{
-  font-size:2em;
+.layer h3, .layer2 h3{
+  font-size:1.2em;
 }
 
-.bottom{
+.bottom, .bottom2{
   background:#222;
   z-index:1;
 }
 
-.bottom .content-body{
+.bottom .content-body, .bottom2 .content-body{
   /* right:5%; */
   width: 50%;
   padding: 1% 25% 5% 1%;
   float: right;
 }
 
-.bottom h1{
+.bottom h3, .bottom2 h3{
   color:#FDAB00;
 }
 
-.top{
+.top, .top2{
   background:#eee;
   color:#222;
   z-index:2;
   width:50vw;
 }
 
-.top .content-body{
+.top .content-body, .top2 .content-body{
   /* left: 5%; */
   color:#222;
   width: 50%;
@@ -67,7 +67,8 @@
   padding: 1% 25% 5% 1%;
 }
 
-.handle{
+
+.handle, .handle2{
   position: absolute;
   height: 100%;
   display: block;
@@ -77,6 +78,7 @@
   left: 52%;
   z-index:3;
 }
+
 
 /* .skewed .handle{
   top:50%;
@@ -111,14 +113,15 @@
 }
 
 .button1 {
-  background-color: #4CAF50;
-  color:  white;
+  
+  background-color: white;
+  color: black;
   border: 2px solid #4CAF50;
 }
 
-.button1:hover {
-  background-color: white;
-  color: black;
+.button1:hover, .activebtn {
+  background-color: #4CAF50;
+  color:  white;
 }
 
 

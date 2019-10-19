@@ -1,0 +1,43 @@
+{%extends "layout.html"%}
+{% set active_page = "cluster_analysis" %}
+{% block scripts %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='get_in_touch.css') }}"> -->
+<script src = "{{ url_for('static', filename = 'cluster_analysis.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='cluster_analysis.css') }}">
+{% endblock scripts%}
+{%block content%}
+<div class="all_content">
+<div class="row cardrow1">
+        
+        <div class="card cardleft">
+            <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" id="imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Heping: Cluster 1</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="slidervalue"></span></p>
+            </div>
+          </div>
+
+        
+        <div class="card cardright">
+                <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c1_0.jpg" id="hep2_imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="hep2_mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Heping: Cluster 2</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="hep2_slidervalue"></span></p>
+            </div>
+          </div>
+    </div>
+
+    </div>
+{% endblock content %}
+

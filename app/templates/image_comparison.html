@@ -8,9 +8,9 @@
 {%block content%}
 <div class="row select_region" style="display: flex; margin-bottom: 5%;">
     <div class="col-md-2"></div>
-    <button class="col-md-3 button button1">Montana's Glacier National Park</button>
+    <button class="col-md-3 button button1 activebtn" id="montanaBtn">Montana's Glacier National Park</button>
     <div class="col-md-2"></div>
-    <button class="col-md-3 button button1">North Patagonian Icefield, Chile</button>
+    <button class="col-md-3 button button1" id="PatagonianBtn">Northern Patagonia, Argentina</button>
     <div class="col-md-2"></div>
 </div>
   <section id="wrapper" class="skewed">
@@ -18,8 +18,9 @@
     <div class="layer bottom">
       <div class="content-wrap">
           <div class="content-body" style="color: white;">
-              <h1>Montana 2019</h1>
+              <h3>Montana 2019</h3>
               <p>Temperatures in western Montana have increased at a rate almost double the global average.</p>
+              <p>Data Source: Landsat 5, 7, 8</p>
             </div>
             <img src="{{ allurls['montana_after'] }}" alt="">
       </div>
@@ -28,8 +29,9 @@
     <div class="layer top">
         <div class="content-wrap">
             <div class="content-body">
-                <h1>Montana 1985</h1>
+                <h3>Montana 1985</h3>
                 <p>Montana's glacier have been reduced by as much as 85 percent over the past 50 years.</p>
+                <p>Data Source: Landsat 5, 7, 8</p>
               </div>
           
           <img src="{{ allurls['montana_before'] }}" alt="">
@@ -38,7 +40,38 @@
 
       <div class="handle"></div>
     </section>
-    <div class="row" style="text-align: center;">Data Source: Landsat 5, 7, 8</div>
+    <!-- <div class="row" style="text-align: center;">Data Source: Landsat 5, 7, 8</div> -->
+
+    <!-- wrapper2 -->
+  <section id="wrapper2" class="skewed2">
+    
+    <div class="layer2 bottom2">
+      <div class="content-wrap">
+          <div class="content-body" style="color: white;">
+              <h3>Northern Patagonia, Argentina 2019</h3>
+              <p>The northern and southern lobes of the Patagonian icefield are what’s left of a much larger ice sheet that reached its maximum size about 18,000 years ago.</p>
+              <p>Data Source: Sentinel</p>
+
+            </div>
+            <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/patagonia_after.png" alt="">
+      </div>
+    </div>
+
+    <div class="layer2 top2">
+        <div class="content-wrap">
+            <div class="content-body">
+                <h3>Northern Patagonia, Argentina 2016</h3>
+                <p>Meltwater from the Patagonian icefield contributes to sea level rise.</p>
+                <p>Data Source: Sentinel</p>
+              </div>
+          
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/patagonia_before.png" alt="">
+        </div>
+      </div>
+
+      <div class="handle2"></div>
+    </section>
+    
 
 {% endblock content %}
 

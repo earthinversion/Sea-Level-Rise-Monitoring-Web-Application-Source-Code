@@ -1,0 +1,136 @@
+.content-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.all_content {
+    position: absolute;
+    /* left: 20%; */
+    margin-bottom: 5%;
+    padding-left: 20%;
+    margin-right: 0;
+}
+.sliderContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.mysliderclass {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    -webkit-transition: 0.2s;
+    opacity: 0.7;
+    background-color: brown;
+}
+.mysliderclass:hover {
+    opacity: 1;
+}
+.mysliderclass::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+
+.mysliderclass::-moz-range-thumb {
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+
+}
+.mysliderclassright {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 5%;
+    -webkit-transition: 0.2s;
+    opacity: 0.7;
+    background-color: brown;
+}
+.mysliderclassright:hover {
+    opacity: 1;
+}
+.mysliderclassright::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+
+.mysliderclassright::-moz-range-thumb {
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+
+}
+
+.sliderContainer img {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 20%;
+}
+.cardrow1 {
+    margin-left: 10%;
+}
+
+.slidervaluesyear:hover {
+    transform: scale(1.3);
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+    border-radius: 5px;
+  }
+  .cardleft {
+      margin-right: 4%;
+  }
+  .cardright {
+      margin-left: 4%;
+  }
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  img {
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .card-content {
+    padding: 2px 16px;
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+  }
+
+  .cardrow2 {
+      margin-top: 5%;
+  }

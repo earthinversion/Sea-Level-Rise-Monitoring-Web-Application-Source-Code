@@ -1,0 +1,59 @@
+.content-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+.sliderContainer {
+    width: 100%;
+    margin: 0;
+}
+
+.mysliderclass {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+    -webkit-transition: 0.2s;
+    opacity: 0.7;
+    background-color: brown;
+}
+.mysliderclass:hover {
+    opacity: 1;
+}
+.mysliderclass::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+}
+
+
+.mysliderclass::-moz-range-thumb {
+    width: 20px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    outline: none;
+    opacity: 0.7;
+    box-shadow: 0px 1px 10px 1px black;
+
+}
+
+.sliderContainer img {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 20%;
+}
+
+
+.slidervaluesyear:hover {
+    transform: scale(1.3);
+}

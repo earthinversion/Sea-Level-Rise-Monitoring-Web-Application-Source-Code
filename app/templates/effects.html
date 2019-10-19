@@ -3,6 +3,8 @@
 {% block scripts %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='get_in_touch.css') }}"> -->
+<script src = "{{ url_for('static', filename = 'effects.js') }}" ></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='effects.css') }}">
 {% endblock scripts%}
 {%block content%}
 <div class="w3-panel w3-leftbar w3-light-grey">
@@ -20,5 +22,20 @@
     <li>Economic loss of the nation due to fall in tourism and real-state industries.</li>
   </ul>
 
+  <div class="row">
+      <div class="sliderContainer">     
+          <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
+          <p class="slidervaluesyear" style="text-align: center;">Year: <span id="slidervalue"></span></p>
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_Taiwan.png" id="imageid">
+      </div>
+      <div class="imageSlider"></div>
+      
+      <div class="sliderContainer">     
+          <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
+          <p class="slidervaluesyear" style="text-align: center;">Year: <span id="slidervalue"></span></p>
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_Taiwan.png" id="imageid">
+      </div>
+      <div class="imageSlider"></div>
+      </div>
 {% endblock content %}
 
