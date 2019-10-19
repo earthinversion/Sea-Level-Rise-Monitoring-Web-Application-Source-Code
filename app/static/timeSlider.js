@@ -1,20 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector("#kaohsiung_region").onclick = dokaohsiung;
+    document.querySelector("#bangladesh_region").onclick = dobangladesh;
     document.querySelector("#mekong_region").onclick = domekong;
     document.querySelector("#taipei_region").onclick = dotaipei;
 
+    
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'kaoshiung_055_1.jpg', urlprefix+'kaoshiung_063_2.jpg', urlprefix+'kaoshiung_082_3.jpg', urlprefix+'kaoshiung_3_4.jpg'];
-    var valuelist = ['0.55 m','0.63 m', '0.82 m', '3 m'];
+    var urlList = [urlprefix+'coastline_taipei_0.png', urlprefix+'coastline_taipei_5.png', urlprefix+'coastline_taipei_10.png', urlprefix+'coastline_taipei_15.png', urlprefix+'coastline_taipei_20.png'];
+    var valuelist = ['0 m','5 m', '10 m', '15 m', '20 m'];
     $("#mysliderid").attr({
-        "max" : 3,        // substitute your own
+        "max" : 4,        // substitute your own
         "min" : 0          // values (or variables) here
      });
     var slider = document.getElementById("mysliderid");
     var slidervalue = document.getElementById("slidervalue");
-
-    slidervalue.innerHTML = slider.value
-
+    
+    slidervalue.innerHTML = valuelist[slider.value];
+    var imageid = document.getElementById("imageid");
+    imageid.src =  urlList[slider.value];
 
     slider.oninput = function() {
         slidervalue.innerHTML = valuelist[this.value];
@@ -24,15 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-function dokaohsiung() {
-    console.log("Doing Kaohsiung");
+function dobangladesh() {
+    console.log("Doing bangladesh");
     remove_all_class();
-    document.getElementById("kaohsiung_region").classList.add('active_region');
+    document.getElementById("bangladesh_region").classList.add('active_region');
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'kaoshiung_055_1.jpg', urlprefix+'kaoshiung_063_2.jpg', urlprefix+'kaoshiung_082_3.jpg', urlprefix+'kaoshiung_3_4.jpg'];
-    var valuelist = ['0.55 m','0.63 m', '0.82 m', '3 m'];
+    var urlList = [urlprefix+'coastline_bangladesh_0.png', urlprefix+'coastline_bangladesh_1.png', urlprefix+'coastline_bangladesh_2.png', urlprefix+'coastline_bangladesh_3.png', urlprefix+'coastline_bangladesh_4.png'];
+    var valuelist = ['0 m','1 m', '2 m', '3 m', '4 m'];
     $("#mysliderid").attr({
-        "max" : 3,        // substitute your own
+        "max" : 4,        // substitute your own
         "min" : 0          // values (or variables) here
      });
     var slider = document.getElementById("mysliderid");
@@ -101,9 +103,9 @@ function dotaipei() {
 }
 
 function remove_all_class() {
-    if ( document.getElementById("kaohsiung_region").classList.contains('active_region') ){
+    if ( document.getElementById("bangladesh_region").classList.contains('active_region') ){
         console.log('remove class kaosiung')
-        document.getElementById("kaohsiung_region").classList.remove('active_region');
+        document.getElementById("bangladesh_region").classList.remove('active_region');
     }
     if ( document.getElementById("mekong_region").classList.contains('active_region') ){
         console.log('remove class mekong')
