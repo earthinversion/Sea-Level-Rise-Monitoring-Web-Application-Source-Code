@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'coastline_taipei_0.png', urlprefix+'coastline_taipei_5.png', urlprefix+'coastline_taipei_10.png', urlprefix+'coastline_taipei_15.png', urlprefix+'coastline_taipei_20.png'];
+    var urlList = [urlprefix+'coastline_taipei_0.jpg', urlprefix+'coastline_taipei_5.jpg', urlprefix+'coastline_taipei_10.jpg', urlprefix+'coastline_taipei_15.jpg', urlprefix+'coastline_taipei_20.jpg'];
     var valuelist = ['0 m','5 m', '10 m', '15 m', '20 m'];
     $("#mysliderid").attr({
         "max" : 4,        // substitute your own
@@ -31,7 +31,7 @@ function dobangladesh() {
     remove_all_class();
     document.getElementById("bangladesh_region").classList.add('active_region');
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'coastline_bangladesh_0.png', urlprefix+'coastline_bangladesh_1.png', urlprefix+'coastline_bangladesh_2.png', urlprefix+'coastline_bangladesh_3.png', urlprefix+'coastline_bangladesh_4.png'];
+    var urlList = [urlprefix+'coastline_bangladesh_0.jpg', urlprefix+'coastline_bangladesh_1.jpg', urlprefix+'coastline_bangladesh_2.jpg', urlprefix+'coastline_bangladesh_3.jpg', urlprefix+'coastline_bangladesh_4.jpg'];
     var valuelist = ['0 m','1 m', '2 m', '3 m', '4 m'];
     $("#mysliderid").attr({
         "max" : 4,        // substitute your own
@@ -57,7 +57,7 @@ function domekong() {
     document.getElementById("mekong_region").classList.add('active_region');
 
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'coastline_mekong_0.png', urlprefix+'coastline_mekong_1.png', urlprefix+'coastline_mekong_2.png', urlprefix+'coastline_mekong_3.png', urlprefix+'coastline_mekong_4.png'];
+    var urlList = [urlprefix+'coastline_mekong_0.jpg', urlprefix+'coastline_mekong_1.jpg', urlprefix+'coastline_mekong_2.jpg', urlprefix+'coastline_mekong_3.jpg', urlprefix+'coastline_mekong_4.jpg'];
     var valuelist = ['0 m','1 m', '2 m', '3 m', '4 m'];
     $("#mysliderid").attr({
         "max" : 4,        // substitute your own
@@ -82,7 +82,7 @@ function dotaipei() {
     document.getElementById("taipei_region").classList.add('active_region');
 
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
-    var urlList = [urlprefix+'coastline_taipei_0.png', urlprefix+'coastline_taipei_5.png', urlprefix+'coastline_taipei_10.png', urlprefix+'coastline_taipei_15.png', urlprefix+'coastline_taipei_20.png'];
+    var urlList = [urlprefix+'coastline_taipei_0.jpg', urlprefix+'coastline_taipei_5.jpg', urlprefix+'coastline_taipei_10.jpg', urlprefix+'coastline_taipei_15.jpg', urlprefix+'coastline_taipei_20.jpg'];
     var valuelist = ['0 m','5 m', '10 m', '15 m', '20 m'];
     $("#mysliderid").attr({
         "max" : 4,        // substitute your own
