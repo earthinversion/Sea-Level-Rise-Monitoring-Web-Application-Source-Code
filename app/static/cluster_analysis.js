@@ -7,7 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var urlprefix = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/";
     var urlList = [];
     var valuelist = [];
-    index_vals = [0, 1, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19];
+    index_vals = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
+    // time_vals = ['2011/07/15 08:49:27','']
     for (var i=0; i<index_vals.length;i++) {
         var filename = "img_heping_c0_"+index_vals[i]+".jpg";
         urlList.push(urlprefix+filename)
