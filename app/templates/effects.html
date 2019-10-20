@@ -12,7 +12,7 @@
   <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
   Sea level will cause more than flooding</p>
 </div>
-<table class="table table-striped" style="margin-left: 20%; width: 60%;">
+<table class="table table-striped" style="margin-left: 20%; width: 60%; text-align: center;">
   <thead>
     <th>Causes</th>
     <th>Effects</th>
@@ -49,42 +49,50 @@
   
   </tbody>
 </table>
-
-  <div class="row">
+<hr>
+  <div class="row" style="background-color: seashell;">
       <div class="sliderContainer"> 
         <h2 style="text-align: center;">Salinity Change Map (Global)</h2>    
           <input type="range" name="points" min="0" max="3" step="1" value="0" id="sssgb_mysliderid" class="mysliderclass">
           <p class="slidervaluesyear" style="text-align: center;">Year: <span id="sssgb_slidervalue">2015-04</span></p>
-          <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/effect/sss_gb_0.png" id="sssgb_imageid">
+          <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/effect/sss_gb_0.png" id="sssgb_imageid" style="border-radius: 8px;">
       </div>
       <div class="imageSlider"></div>
       </div>
+      <hr>
+
   <div class="row">
       <div class="sliderContainer"> 
         <h2 style="text-align: center;">Salinity Change Map (Taiwan)</h2>    
           <input type="range" name="points" min="0" max="3" step="1" value="0" id="ssstw_mysliderid" class="mysliderclass">
           <p class="slidervaluesyear" style="text-align: center;">Year: <span id="ssstw_slidervalue">2015-04</span></p>
-          <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/effect/sss_tw_0.png" id="ssstw_imageid">
+          <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/effect/sss_tw_0.png" id="ssstw_imageid" style="border-radius: 8px;">
       </div>
       <div class="imageSlider"></div>
       </div>
-  <div class="row">
+      <hr>
+
+  <div class="row" style="background-color: seashell;">
       <div class="sliderContainer"> 
         <h2 style="text-align: center;">Chlorophyll Annual Variation</h2>    
           <input type="range" name="points" min="0" max="3" step="1" value="0" id="chloro_mysliderid" class="mysliderclass">
           <p class="slidervaluesyear" style="text-align: center;">Year: <span id="chloro_slidervalue">2002</span></p>
-          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/CHLOR_2002_Taiwan.png" id="chloro_imageid">
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/CHLOR_2002_Taiwan.png" id="chloro_imageid" style="border-radius: 8px;">
       </div>
       <div class="imageSlider"></div>
       </div>
+      <hr>
+
   <div class="row">
       <div class="sliderContainer"> 
         <h2 style="text-align: center;">Liquid Water Equivalent Thickness (Greenland) </h2>    
           <input type="range" name="points" min="0" max="3" step="1" value="0" id="wthick_mysliderid" class="mysliderclass">
           <p class="slidervaluesyear" style="text-align: center;">Year: <span id="wthick_slidervalue">2002</span></p>
-          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_GRNLND.png" id="wthick_imageid">
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_GRNLND.png" id="wthick_imageid" style="border-radius: 8px;">
       </div>
       <div class="imageSlider"></div>
       </div>
+      <hr>
+
 {% endblock content %}
 
