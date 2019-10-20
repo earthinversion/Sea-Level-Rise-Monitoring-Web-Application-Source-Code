@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var urlprefix_wthick = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
     var urlList = [];
     var valuelist = [];
-    for (var year=2002; year<=2018;year++) {
+    for (var year=2002; year<=2017;year++) {
         urlList.push(urlprefix_wthick+"SWET_"+year+"_GRNLND.png")
         valuelist.push(year)
     }
@@ -252,7 +252,7 @@ function dowthick() {
     var urlprefix_wthick = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
     var urlList = [];
     var valuelist = [];
-    for (var year=2002; year<=2018;year++) {
+    for (var year=2002; year<=2017;year++) {
         urlList.push(urlprefix_wthick+"SWET_"+year+"_GRNLND.png")
         valuelist.push(year)
     }
