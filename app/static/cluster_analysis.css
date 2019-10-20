@@ -97,7 +97,7 @@
     margin-left: 30%;
     margin-right: 20%;
 }
-.cardrow1 {
+.cardrow1,.cardrow2,.cardrow3 {
     margin-left: 10%;
 }
 
@@ -131,6 +131,6 @@
     font-family: 'Libre Franklin', sans-serif;
   }
 
-  .cardrow2 {
+  .cardrow2, .cardrow3 {
       margin-top: 5%;
   }

@@ -2,13 +2,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // document.querySelector("#bangladesh_region").onclick = dobangladesh;
     // document.querySelector("#mekong_region").onclick = domekong;
     // document.querySelector("#taipei_region").onclick = dotaipei;
-
     
     var urlprefix = "https://raw.githubusercontent.com/earthinversion/logoStore/master/";
     var urlList = [];
     var valuelist = [];
-    for (var year=2002; year<=2017;year++) {
-        urlList.push(urlprefix+"SWET_"+year+"_Taiwan.png")
+    for (var year=2002; year<=2018;year++) {
+        urlList.push(urlprefix+"CHLOR_"+year+"_Taiwan.png")
         valuelist.push(year)
     }
     console.log(urlList)

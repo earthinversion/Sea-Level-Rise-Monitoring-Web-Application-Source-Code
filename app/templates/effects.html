@@ -7,33 +7,63 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='effects.css') }}">
 {% endblock scripts%}
 {%block content%}
-<div class="w3-panel w3-leftbar w3-light-grey">
+<div class="w3-panel w3-leftbar w3-light-grey" style="margin-left: 20%; width: 60%;">
   <p class=" w3-xlarge w3-serif">
   <i class="fa fa-quote-right w3-xxlarge w3-text-red"></i><br>
   Sea level will cause more than flooding</p>
 </div>
-  <h3>Primary Effects</h3> 
+<table class="table table-striped" style="margin-left: 20%; width: 60%;">
+  <thead>
+    <th>Causes</th>
+    <th>Effects</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Global Ice Melting</td>
+      <td>Salinity change</td>
+    </tr>
+    <tr>
+      <td>Thermal expansion of water</td>
+      <td>Drinking water contamination</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Interfere with farming</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Wildlife population</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Economic loss</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>Land subsidence</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  
+  </tbody>
+</table>
+  <!-- <h3>Primary Effects</h3> 
   <ul>
-    <li>Global temperature rise will lead to the increased severity of sea level rise as the higher temperature causes the water to expand.</li>
     <li>Drinking water contamination</li>
     <li>Interfere with farming</li>
     <li>Loss of vegetation near coastlines</li>
     <li>Wildlife population affected near the coastlines</li>
     <li>Economic loss of the nation due to fall in tourism and real-state industries.</li>
-  </ul>
+  </ul> -->
 
   <div class="row">
-      <div class="sliderContainer">     
+      <div class="sliderContainer"> 
+        <h2 style="text-align: center;">Chlorophyll Annual Variation</h2>    
           <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
           <p class="slidervaluesyear" style="text-align: center;">Year: <span id="slidervalue"></span></p>
-          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_Taiwan.png" id="imageid">
-      </div>
-      <div class="imageSlider"></div>
-      
-      <div class="sliderContainer">     
-          <input type="range" name="points" min="0" max="3" step="1" value="0" id="mysliderid" class="mysliderclass">
-          <p class="slidervaluesyear" style="text-align: center;">Year: <span id="slidervalue"></span></p>
-          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/SWET_2002_Taiwan.png" id="imageid">
+          <img src="https://raw.githubusercontent.com/earthinversion/logoStore/master/CHLOR_2002_Taiwan.png" id="imageid">
       </div>
       <div class="imageSlider"></div>
       </div>

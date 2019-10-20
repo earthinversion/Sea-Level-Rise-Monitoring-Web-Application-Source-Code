@@ -77,10 +77,9 @@ def image_analysis():
 def cluster_analysis():
     return render_template('cluster_analysis.html')
 
-# @app.route('/image_analysis/yehliu_image_analysis')
-# def yehliu_image_analysis():
-#     imageurl = "https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready"
-#     return render_template('yehliu_image_analysis.html',imageurl=imageurl)
+@app.route('/cluster_map')
+def cluster_map():
+    return render_template('cluster_map.html')
     
 
 

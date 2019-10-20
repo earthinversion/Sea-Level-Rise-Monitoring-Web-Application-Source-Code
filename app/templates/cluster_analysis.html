@@ -8,6 +8,19 @@
 {% endblock scripts%}
 {%block content%}
 <div class="all_content">
+    <hr>
+    <h3 style="margin-left: 20%;">Decide your climate footprint</h3>
+    <form action="/upload" class="upload-form" method="POST" enctype="multipart/form-data" style="margin-left: 20%;">
+      <div class="form-group"> 
+        <input type="file" name="file"> <button type="submit" name="submit" class="btn btn-primary" id="restUploadState"> Upload feature images</button> 
+      </div>
+    </form>
+    <hr>
+
+  <div class="iframe_content" style="margin-left: 20%; margin-bottom: 5%;">
+    <iframe src="{{url_for('cluster_map')}}" width="500" height="400" align="center"></iframe>
+  </div>
+  
 <div class="row cardrow1">
         
         <div class="card cardleft">
@@ -34,6 +47,64 @@
               <h4><b>Heping: Cluster 2</b></h4> 
               <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
               <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="hep2_slidervalue"></span></p>
+            </div>
+          </div>
+    </div>
+<div class="row cardrow2">
+        
+        <div class="card cardleft">
+            <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_kenting_c0_0.jpg" id="ken1_imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="ken1_mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Kenting: Cluster 1</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="ken1_slidervalue"></span></p>
+            </div>
+          </div>
+
+        
+        <div class="card cardright">
+                <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_kenting_c1_0.jpg" id="ken2_imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="ken2_mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Kenting: Cluster 2</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="ken2_slidervalue"></span></p>
+            </div>
+          </div>
+    </div>
+<div class="row cardrow3">
+        
+        <div class="card cardleft">
+            <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_yehliu_c0_0.jpg" id="yeh1_imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="yeh1_mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Yehliu: Cluster 1</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="yeh1_slidervalue"></span></p>
+            </div>
+          </div>
+
+        
+        <div class="card cardright">
+                <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_yehliu_c1_0.jpg" id="yeh2_imageid">
+            <!-- <img src="https://raw.githubusercontent.com/nghia1991ad/nasa_photos/master/image_ready/img_heping_c0_0.jpg" alt="observations" style="width:100%;"> -->
+            <div class="card-content">
+            <div class="sliderContainer">     
+                    <input type="range" name="points" min="0" max="3" step="1" value="0" id="yeh2_mysliderid" class="mysliderclass">
+                </div>
+              <h4><b>Yehliu: Cluster 2</b></h4> 
+              <!-- <p style="color: gray;">How much sea level is rising?</p>  -->
+              <p class="slidervaluesyear" style="text-align: center;">Image file: <span id="yeh2_slidervalue"></span></p>
             </div>
           </div>
     </div>
